@@ -2,21 +2,21 @@
 {
     "clients": {
         "Gexp": {
-            "version": "1.6.1-beta",
+            "version": "1.6.6-beta",
             "platforms": {
                 "linux": {
                     "x64": {
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "c97aeb131a659f6afdfe58214594f2e7",
+                            "md5": "3a61414d937d11974387a727ef06dcee",
                             "bin": "gexp-linux-amd64/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.6.1-beta" ]
+                                "output": [ "Gexp", "1.6.6-beta" ]
                             }
                         }
                     },
@@ -24,14 +24,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-linux-386.tar.gz",
                             "type": "tar",
-                            "md5": "47f562eacdaa6fdbcf5420894722161c",
+                            "md5": "658e110b1e93507969f78a07b897d346",
                             "bin": "gexp-linux-386/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.6.1-beta" ]
+                                "output": [ "Gexp", "1.6.6-beta" ]
                             }
                         }
                     }
@@ -41,14 +41,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-darwin-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "355b57f6749769a5a87475021199897e",
+                            "md5": "d6f6b2ffad875fafcedb4140fceab644",
                             "bin": "gexp-darwin-amd64/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.6.1-beta" ]
+                                "output": [ "Gexp", "1.6.6-beta" ]
                             }
                         }
                     }
@@ -58,14 +58,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "1e13e84470aad793fcb0f587c0d0ce0e",
+                            "md5": "8c053867645769f50bf63e434400fc40",
                             "bin": "gexp-windows-amd64\\gexp.exe"
                         },
                         "bin": "gexp.exe",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.6.1-beta" ]
+                                "output": [ "Gexp", "1.6.6-beta" ]
                             }
                         }
                     },
@@ -73,14 +73,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-windows-386.zip",
                             "type": "zip",
-                            "md5": "76d24d411d8c136fc2f9e9e81856a4ac",
+                            "md5": "d980057b3b6a3286916c714b5dc1d5a7",
                             "bin": "gexp-windows-386\\gexp.exe"
                         },
                         "bin": "gexp.exe",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.6.1-beta" ]
+                                "output": [ "Gexp", "1.6.6-beta" ]
                             }
                         }
                     }
