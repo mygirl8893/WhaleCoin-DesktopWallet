@@ -3678,7 +3678,7 @@ window.SIGNATURES = {
         "newWinner(uint256,address,uint256,uint256,uint256)"
     ],
     "0x3e5fd9b5": [
-        "dEthereumlotteryNet(address,address,bool,address)"
+        "dWhaleCoinlotteryNet(address,address,bool,address)"
     ],
     "0x149c5066": [
         "ChanceOfWinning(uint256)"
@@ -3858,7 +3858,7 @@ window.SIGNATURES = {
         "rand(uint256)"
     ],
     "0x17db59a4": [
-        "dEthereumlotteryNet(address,address,address)"
+        "dWhaleCoinlotteryNet(address,address,address)"
     ],
     "0xa0f029fc": [
         "ContractorInterface(address,address,address)"
@@ -3882,13 +3882,13 @@ window.SIGNATURES = {
         "getCount()"
     ],
     "0xe3914699": [
-        "dEthereumlotteryNetWinners(address)"
+        "dWhaleCoinlotteryNetWinners(address)"
     ],
     "0x477bddaa": [
         "setContractAddress(address)"
     ],
     "0xc6ae3b57": [
-        "dEthereumlotteryNet(address,address)"
+        "dWhaleCoinlotteryNet(address,address)"
     ],
     "0xe1376da2": [
         "updateFirstActiveGamble(uint256)"
@@ -3897,7 +3897,7 @@ window.SIGNATURES = {
         "getFirstActiveDuel()"
     ],
     "0xf99fc046": [
-        "dEthereumlotteryNet()"
+        "dWhaleCoinlotteryNet()"
     ],
     "0xc494f71a": [
         "LedgerFund(uint32,uint32,uint64,uint64)"
@@ -4005,7 +4005,7 @@ window.SIGNATURES = {
         "Prizes()"
     ],
     "0xcee6ee38": [
-        "aEthereumlotteryNet()"
+        "aWhaleCoinlotteryNet()"
     ],
     "0x91d8b14e": [
         "BuyTickets()"
@@ -4086,7 +4086,7 @@ window.SIGNATURES = {
         "hasPhysicalAddress(address)"
     ],
     "0x5f2e686d": [
-        "Ethereum_eight_bagger()"
+        "WhaleCoin_eight_bagger()"
     ],
     "0x1437f9a3": [
         "Set_your_game_number(uint16)"
@@ -4647,7 +4647,7 @@ window.SIGNATURES = {
         "collectFees()"
     ],
     "0xb6509c12": [
-        "Ethereum_twelve_bagger()"
+        "WhaleCoin_twelve_bagger()"
     ],
     "0x421aeda6": [
         "Set_your_game_number(string)"
@@ -4674,7 +4674,7 @@ window.SIGNATURES = {
         "CheckPrize(address,uint256)"
     ],
     "0x83b23b40": [
-        "cEthereumlotteryNet()"
+        "cWhaleCoinlotteryNet()"
     ],
     "0xe56b9dce": [
         "GetPrize(uint256)"
@@ -4932,7 +4932,7 @@ window.SIGNATURES = {
         "UserCheckBalance(address)"
     ],
     "0x53b7b2e9": [
-        "cEthereumlotteryNet(bytes)"
+        "cWhaleCoinlotteryNet(bytes)"
     ],
     "0x78e80b39": [
         "UserGetPrize()"
@@ -5298,7 +5298,7 @@ window.SIGNATURES = {
         "etherlist_top()"
     ],
     "0x4789aaef": [
-        "EthereumDice()"
+        "WhaleCoinDice()"
     ],
     "0xc2e9fab3": [
         "SubUser()"
@@ -12441,7 +12441,7 @@ window.SIGNATURES = {
         "etherandomVerify(bytes32,bytes32,bytes32,uint256,uint256)"
     ],
     "0x29bed3bf": [
-        "EthereumRoulette()"
+        "WhaleCoinRoulette()"
     ],
     "0xd81f53fd": [
         "EtherId()"
@@ -13635,7 +13635,7 @@ window.SIGNATURES = {
         "LittleCactus()"
     ],
     "0x7b647652": [
-        "LittleEthereumDoubler()"
+        "LittleWhaleCoinDoubler()"
     ],
     "0xf83d08ba": [
         "lock()"
@@ -15633,7 +15633,7 @@ window.SIGNATURES = {
         "theDonkeyKing()"
     ],
     "0x87fd0421": [
-        "TheEthereumLottery()"
+        "TheWhaleCoinLottery()"
     ],
     "0x0e3f732a": [
         "TheGame()"

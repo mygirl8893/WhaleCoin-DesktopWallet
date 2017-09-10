@@ -5,13 +5,13 @@ const spawn = require('child_process').spawn;
 const { dialog } = require('electron');
 const Windows = require('./windows.js');
 const Settings = require('./settings');
-const log = require('./utils/logger').create('EthereumNode');
+const log = require('./utils/logger').create('WhaleCoinNode');
 const logRotate = require('log-rotate');
 const EventEmitter = require('events').EventEmitter;
 const Sockets = require('./socketManager');
 const ClientBinaryManager = require('./clientBinaryManager');
 
-const DEFAULT_NODE_TYPE = 'geth';
+const DEFAULT_NODE_TYPE = 'gwhale';
 const DEFAULT_NETWORK = 'main';
 
 const UNABLE_TO_BIND_PORT_ERROR = 'unableToBindPort';
@@ -30,7 +30,7 @@ const STATES = {
 /**
  * Etheruem nodes manager.
  */
-class EthereumNode extends EventEmitter {
+class WhaleCoinNode extends EventEmitter {
     constructor() {
         super();
 
@@ -72,7 +72,7 @@ class EthereumNode extends EventEmitter {
     }
 
     get isGeth() {
-        return this._type === 'geth';
+        return this._type === 'gwhale';
     }
 
     get isMainNetwork() {
@@ -250,7 +250,7 @@ class EthereumNode extends EventEmitter {
 
     /**
      * Start an ethereum node.
-     * @param  {String} nodeType geth, eth, etc
+     * @param  {String} nodeType gwhale, eth, etc
      * @param  {String} network  network id
      * @return {Promise}
      */
@@ -307,9 +307,9 @@ class EthereumNode extends EventEmitter {
                 this.lastError = err.tag;
                 this.state = STATES.ERROR;
 
-                // if unable to start eth node then write geth to defaults
+                // if unable to start eth node then write gwhale to defaults
                 if (nodeType === 'eth') {
-                    Settings.saveUserData('node', 'geth');
+                    Settings.saveUserData('node', 'gwhale');
                 }
 
                 throw err;
@@ -364,7 +364,7 @@ class EthereumNode extends EventEmitter {
                 switch (network) {
                 // STARTS ROPSTEN
                 case 'test':
-                    args = (nodeType === 'geth') ? [
+                    args = (nodeType === 'gwhale') ? [
                         '--testnet',
                         '--fast',
                         '--cache', ((process.arch === 'x64') ? '1024' : '512'),
@@ -394,7 +394,7 @@ class EthereumNode extends EventEmitter {
 
                 // STARTS MAINNET
                 default:
-                    args = (nodeType === 'geth')
+                    args = (nodeType === 'gwhale')
                         ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512')]
                         : ['--unsafe-transactions'];
                 }
@@ -440,7 +440,7 @@ class EthereumNode extends EventEmitter {
                     if (STATES.STARTING === this.state) {
                         const dataStr = data.toString().toLowerCase();
 
-                        if (nodeType === 'geth') {
+                        if (nodeType === 'gwhale') {
                             if (dataStr.indexOf('fatal: error') >= 0) {
                                 const err = new Error(`Geth error: ${dataStr}`);
 
@@ -471,7 +471,7 @@ class EthereumNode extends EventEmitter {
                     /*
                         We wait a short while before marking startup as successful
                         because we may want to parse the initial node output for
-                        errors, etc (see geth port-binding error above)
+                        errors, etc (see gwhale port-binding error above)
                     */
                     setTimeout(() => {
                         if (STATES.STARTING === this.state) {
@@ -532,7 +532,7 @@ class EthereumNode extends EventEmitter {
 
 
 
-EthereumNode.STARTING = 0;
+WhaleCoinNode.STARTING = 0;
 
 
-module.exports = new EthereumNode();
+module.exports = new WhaleCoinNode();

@@ -34,7 +34,7 @@ const argv = require('yargs')
         node: {
             demand: false,
             default: null,
-            describe: 'Node to use: geth, eth',
+            describe: 'Node to use: gwhale, eth',
             requiresArg: true,
             nargs: 1,
             type: 'string',
@@ -66,7 +66,7 @@ const argv = require('yargs')
             type: 'string',
             group: 'Mist options:',
         },
-        gethpath: {
+        gwhalepath: {
             demand: false,
             describe: 'Path to Geth executable to use instead of default.',
             requiresArg: true,
@@ -187,7 +187,7 @@ class Settings {
     }
 
     get appName() {
-        return this.uiMode === 'mist' ? 'Mist' : 'Ethereum Wallet';
+        return this.uiMode === 'mist' ? 'Mist' : 'WhaleCoin Wallet';
     }
 
     get appLicense() {
@@ -210,8 +210,8 @@ class Settings {
         return argv.swarmurl;
     }
 
-    get gethPath() {
-        return argv.gethpath;
+    get gwhalePath() {
+        return argv.gwhalepath;
     }
 
     get ethPath() {
@@ -255,13 +255,13 @@ class Settings {
         ipcPath = this.userHomePath;
 
         if (process.platform === 'darwin') {
-            ipcPath += '/Library/Ethereum/geth.ipc';
+            ipcPath += '/Library/WhaleCoin/gwhale.ipc';
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-            ipcPath += '/.ethereum/geth.ipc';
+            ipcPath += '/.whalecoin/gwhale.ipc';
         } else if (process.platform === 'win32') {
-            ipcPath = '\\\\.\\pipe\\geth.ipc';
+            ipcPath = '\\\\.\\pipe\\gwhale.ipc';
         }
 
         this._log.debug(`IPC path: ${ipcPath}`);

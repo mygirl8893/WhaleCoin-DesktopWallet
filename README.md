@@ -1,24 +1,24 @@
 # Mist Browser
 
-[![Join the chat at https://gitter.im/ethereum/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/mist?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status develop branch](https://travis-ci.org/ethereum/mist.svg?branch=develop)](https://travis-ci.org/ethereum/mist)
-[![Code Climate](https://codeclimate.com/github/ethereum/mist/badges/gpa.svg)](https://codeclimate.com/github/ethereum/mist)
+[![Join the chat at https://gitter.im/WhaleCoinOrg/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WhaleCoinOrg/mist?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status develop branch](https://travis-ci.org/WhaleCoinOrg/mist.svg?branch=develop)](https://travis-ci.org/WhaleCoinOrg/mist)
+[![Code Climate](https://codeclimate.com/github/WhaleCoinOrg/mist/badges/gpa.svg)](https://codeclimate.com/github/WhaleCoinOrg/mist)
 
 The Mist browser is the tool of choice to browse and use Ðapps.
 
 For the Mist API see the [MISTAPI.md](MISTAPI.md).
 
-Please note that this repository is the Electron host for the Meteor based wallet dapp whose repository is located here: https://github.com/ethereum/meteor-dapp-wallet.
+Please note that this repository is the Electron host for the Meteor based wallet dapp whose repository is located here: https://github.com/WhaleCoinOrg/meteor-dapp-wallet.
 
 ## Help and troubleshooting
 
-Please check the [Mist troubleshooting guide](https://github.com/ethereum/mist/wiki).
+Please check the [Mist troubleshooting guide](https://github.com/WhaleCoinOrg/mist/wiki).
 
-Or the [Gitter Channel](https://gitter.im/ethereum/mist), to connect with the community for instant help.
+Or the [Gitter Channel](https://gitter.im/WhaleCoinOrg/mist), to connect with the community for instant help.
 
 ## Installation
 
-If you want to install the app from a pre-built version on the [release page](https://github.com/ethereum/mist/releases),
+If you want to install the app from a pre-built version on the [release page](https://github.com/WhaleCoinOrg/mist/releases),
 you can simply run the executeable after download.
 
 For updating simply download the new version and copy it over the old one (keep a backup of the old one if you want to be sure).
@@ -57,7 +57,7 @@ Install the latter ones via:
 
 Now you're ready to initialise Mist for development:
 
-    $ git clone https://github.com/ethereum/mist.git
+    $ git clone https://github.com/WhaleCoinOrg/mist.git
     $ cd mist
     $ yarn
 
@@ -79,7 +79,7 @@ In the original window you can then start Mist with:
     $ cd mist
     $ electron .
 
-*NOTE: client-binaries (e.g. [geth](https://github.com/ethereum/go-ethereum)) specified in [clientBinaries.json](https://github.com/ethereum/mist/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
+*NOTE: client-binaries (e.g. [gwhale](https://github.com/WhaleCoinOrg/go-ethereum)) specified in [clientBinaries.json](https://github.com/WhaleCoinOrg/mist/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
 
 *NOTE: use `--help` to display available options, e.g. `--loglevel debug` (or `trace`) for verbose output*
 
@@ -122,14 +122,14 @@ The `--rpc` Mist option is a special case. If you set this to an IPC socket file
 path then the `--ipcpath` option automatically gets set, i.e.:
 
 ```bash
-$ electron . --rpc /my/geth.ipc
+$ electron . --rpc /my/gwhale.ipc
 ```
 
 ...is the same as doing...
 
 
 ```bash
-$ electron . --rpc /my/geth.ipc --node-ipcpath /my/geth.ipc
+$ electron . --rpc /my/gwhale.ipc --node-ipcpath /my/gwhale.ipc
 ```
 
 ### Creating a local private net
@@ -144,13 +144,13 @@ To run a private network you will need to set the IPC path, network id and data
 folder:
 
 ```bash
-$ electron . --rpc ~/Library/Ethereum/geth.ipc --node-networkid 1234 --node-datadir ~/Library/Ethereum/privatenet
+$ electron . --rpc ~/Library/WhaleCoin/gwhale.ipc --node-networkid 1234 --node-datadir ~/Library/WhaleCoin/privatenet
 ```
 
 _NOTE: since `ipcpath` is also a Mist option you do not need to also include a
 `--node-ipcpath` option._
 
-You can also launch `geth` separately with the same options prior starting
+You can also launch `gwhale` separately with the same options prior starting
 Mist.
 
 
@@ -178,7 +178,7 @@ To generate the binaries for Mist run:
 
     $ gulp
 
-To generate the Ethereum Wallet (this will pack the one Ðapp from https://github.com/ethereum/meteor-dapp-wallet):
+To generate the WhaleCoin Wallet (this will pack the one Ðapp from https://github.com/WhaleCoinOrg/meteor-dapp-wallet):
 
     $ gulp --wallet
 

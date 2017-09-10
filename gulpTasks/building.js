@@ -12,7 +12,7 @@ const version = require('../package.json').version;
 
 
 const type = options.type;
-const applicationName = (options.wallet) ? 'Ethereum Wallet' : 'Mist';
+const applicationName = (options.wallet) ? 'WhaleCoin Wallet' : 'Mist';
 
 
 gulp.task('clean-dist', (cb) => {
@@ -78,9 +78,9 @@ gulp.task('bundling-interface', (cb) => {
             bundle(`&& cd ../../meteor-dapp-wallet/app \
                 && meteor-build-client ../../mist/dist_${type}/app/interface/wallet -p ""`);
         } else {
-            console.log(`Pulling https://github.com/ethereum/meteor-dapp-wallet/tree/${options.walletSource} "${options.walletSource}" branch...`);
+            console.log(`Pulling https://github.com/WhaleCoinOrg/meteor-dapp-wallet/tree/${options.walletSource} "${options.walletSource}" branch...`);
             bundle(`&& cd ../dist_${type} \
-                && git clone --depth 1 https://github.com/ethereum/meteor-dapp-wallet.git \
+                && git clone --depth 1 https://github.com/WhaleCoinOrg/meteor-dapp-wallet.git \
                 && cd meteor-dapp-wallet/app \
                 && meteor-build-client ../../app/interface/wallet -p "" \
                 && cd ../../ \
@@ -108,7 +108,7 @@ gulp.task('build-dist', (cb) => {
         name: applicationName.replace(/\s/, ''),
         productName: applicationName,
         description: applicationName,
-        homepage: 'https://github.com/ethereum/mist',
+        homepage: 'https://github.com/WhaleCoinOrg/mist',
         build: {
             appId: `com.ethereum.${type}`,
             asar: true,

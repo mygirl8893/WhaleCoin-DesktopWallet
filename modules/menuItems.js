@@ -176,20 +176,20 @@ let menuTempl = function (webviews) {
                                     userPath += '/.web3/keys';
                                 }
 
-                            // geth
+                            // gwhale
                             } else {
                                 if (process.platform === 'darwin') {
-                                    userPath += '/Library/Ethereum/keystore';
+                                    userPath += '/Library/WhaleCoin/keystore';
                                 }
 
                                 if (process.platform === 'freebsd' ||
                                 process.platform === 'linux' ||
                                 process.platform === 'sunos') {
-                                    userPath += '/.ethereum/keystore';
+                                    userPath += '/.whalecoin/keystore';
                                 }
 
                                 if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\Ethereum\\keystore`;
+                                    userPath = `${Settings.appDataPath}\\WhaleCoin\\keystore`;
                                 }
                             }
 
@@ -448,17 +448,17 @@ let menuTempl = function (webviews) {
         const nodeSubmenu = [];
 
         const ethClient = ClientBinaryManager.getClient('eth');
-        const gethClient = ClientBinaryManager.getClient('geth');
+        const gwhaleClient = ClientBinaryManager.getClient('gwhale');
 
-        if (gethClient) {
+        if (gwhaleClient) {
             nodeSubmenu.push(
                 {
-                    label: `Geth ${gethClient.version} (Go)`,
+                    label: `Geth ${gwhaleClient.version} (Go)`,
                     checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
                     enabled: ethereumNode.isOwnNode,
                     type: 'checkbox',
                     click() {
-                        restartNode('geth');
+                        restartNode('gwhale');
                     },
                 }
             );
@@ -627,17 +627,17 @@ let menuTempl = function (webviews) {
     helpMenu.push({
         label: i18n.t('mist.applicationMenu.help.mistWiki'),
         click() {
-            shell.openExternal('https://github.com/ethereum/mist/wiki');
+            shell.openExternal('https://github.com/WhaleCoinOrg/mist/wiki');
         },
     }, {
         label: i18n.t('mist.applicationMenu.help.gitter'),
         click() {
-            shell.openExternal('https://gitter.im/ethereum/mist');
+            shell.openExternal('https://gitter.im/WhaleCoinOrg/mist');
         },
     }, {
         label: i18n.t('mist.applicationMenu.help.reportBug'),
         click() {
-            shell.openExternal('https://github.com/ethereum/mist/issues');
+            shell.openExternal('https://github.com/WhaleCoinOrg/mist/issues');
         },
     });
 

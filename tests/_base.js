@@ -6,7 +6,7 @@ const fs = require('fs');
 const Web3 = require('web3');
 const shell = require('shelljs');
 const path = require('path');
-const gethPrivate = require('geth-private');
+const gwhalePrivate = require('geth-private');
 const Application = require('spectron').Application;
 const chai = require('chai');
 const http = require('http');
@@ -19,7 +19,7 @@ chai.should();
 process.env.TEST_MODE = 'true';
 
 const startGeth = function* () {
-    let gethPath;
+    let gwhalePath;
 
     const config = JSON.parse(
         fs.readFileSync(path.join('clientBinaries.json')).toString()
@@ -28,15 +28,15 @@ const startGeth = function* () {
     yield manager.init();
 
     if (!manager.clients.Geth.state.available) {
-        gethPath = manager.clients.Geth.activeCli.fullPath;
-        console.info('Downloading geth...');
+        gwhalePath = manager.clients.Geth.activeCli.fullPath;
+        console.info('Downloading gwhale...');
         const downloadedGeth = yield manager.download('Geth');
-        gethPath = downloadedGeth.client.activeCli.fullPath;
-        console.info('Geth downloaded at:', gethPath);
+        gwhalePath = downloadedGeth.client.activeCli.fullPath;
+        console.info('Geth downloaded at:', gwhalePath);
     }
 
-    const geth = gethPrivate({
-        gethPath,
+    const gwhale = gwhalePrivate({
+        gwhalePath,
         balance: 5,
         genesisBlock: {
             config: {
@@ -45,13 +45,13 @@ const startGeth = function* () {
             difficulty: '0x01',
             extraData: '0x01',
         },
-        gethOptions: {
+        gwhaleOptions: {
             port: 58546,
             rpcport: 58545,
         },
     });
-    yield geth.start();
-    return geth;
+    yield gwhale.start();
+    return gwhale;
 };
 
 const startFixtureServer = function (serverPort) {
@@ -88,13 +88,13 @@ exports.mocha = (_module, options) => {
                 shell.rm('-f', e);
             });
 
-            this.geth = yield startGeth();
+            this.gwhale = yield startGeth();
 
-            const appFileName = (options.app === 'wallet') ? 'Ethereum Wallet' : 'Mist';
+            const appFileName = (options.app === 'wallet') ? 'WhaleCoin Wallet' : 'Mist';
             const platformArch = `${process.platform}-${process.arch}`;
 
             let appPath;
-            const ipcProviderPath = path.join(this.geth.dataDir, 'geth.ipc');
+            const ipcProviderPath = path.join(this.gwhale.dataDir, 'gwhale.ipc');
 
             switch (platformArch) {
             case 'darwin-x64':
@@ -124,7 +124,7 @@ exports.mocha = (_module, options) => {
                 args: [
                     '--loglevel', 'debug',
                     '--logfile', mistLogFile,
-                    '--node-datadir', this.geth.dataDir,
+                    '--node-datadir', this.gwhale.dataDir,
                     '--rpc', ipcProviderPath,
                 ],
                 webdriverLogPath: webdriverLogFile,
@@ -213,9 +213,9 @@ exports.mocha = (_module, options) => {
                 yield this.app.stop();
             }
 
-            if (this.geth && this.geth.isRunning) {
-                console.log('Stopping geth...');
-                yield this.geth.stop();
+            if (this.gwhale && this.gwhale.isRunning) {
+                console.log('Stopping gwhale...');
+                yield this.gwhale.stop();
             }
 
             if (this.httpServer && this.httpServer.isListening) {
@@ -344,10 +344,10 @@ const Utils = {
         yield Q.delay(1000);
     },
     * startMining() {
-        yield this.geth.consoleExec('miner.start();');
+        yield this.gwhale.consoleExec('miner.start();');
     },
     * stopMining() {
-        yield this.geth.consoleExec('miner.stop();');
+        yield this.gwhale.consoleExec('miner.stop();');
     },
 
     * selectTab(tabId) {

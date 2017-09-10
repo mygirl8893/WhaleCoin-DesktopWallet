@@ -6,12 +6,12 @@
                 "linux": {
                     "x64": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.6.7-ab5646c5.tar.gz",
+                            "url": "https://gwhalestore.blob.core.windows.net/builds/gwhale-linux-amd64-1.6.7-ab5646c5.tar.gz",
                             "type": "tar",
                             "md5": "d5331a9ba124778d6d1341baba56ef11",
-                            "bin": "geth-linux-amd64-1.6.7-ab5646c5/geth"
+                            "bin": "gwhale-linux-amd64-1.6.7-ab5646c5/gwhale"
                         },
-                        "bin": "geth",
+                        "bin": "gwhale",
                         "commands": {
                             "sanity": {
                                 "args": [
@@ -26,12 +26,12 @@
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-linux-386-1.6.7-ab5646c5.tar.gz",
+                            "url": "https://gwhalestore.blob.core.windows.net/builds/gwhale-linux-386-1.6.7-ab5646c5.tar.gz",
                             "type": "tar",
                             "md5": "d9833199b6df5404be6cedc854198e1d",
-                            "bin": "geth-linux-386-1.6.7-ab5646c5/geth"
+                            "bin": "gwhale-linux-386-1.6.7-ab5646c5/gwhale"
                         },
-                        "bin": "geth",
+                        "bin": "gwhale",
                         "commands": {
                             "sanity": {
                                 "args": [
@@ -48,12 +48,12 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-darwin-amd64-1.6.7-ab5646c5.tar.gz",
+                            "url": "https://gwhalestore.blob.core.windows.net/builds/gwhale-darwin-amd64-1.6.7-ab5646c5.tar.gz",
                             "type": "tar",
                             "md5": "3da6ebf7255deb74bd46743cb7113b1b",
-                            "bin": "geth-darwin-amd64-1.6.7-ab5646c5/geth"
+                            "bin": "gwhale-darwin-amd64-1.6.7-ab5646c5/gwhale"
                         },
-                        "bin": "geth",
+                        "bin": "gwhale",
                         "commands": {
                             "sanity": {
                                 "args": [
@@ -70,12 +70,12 @@
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-1.6.7-ab5646c5.zip",
+                            "url": "https://gwhalestore.blob.core.windows.net/builds/gwhale-windows-amd64-1.6.7-ab5646c5.zip",
                             "type": "zip",
                             "md5": "6c5d11b0e0d1ca420be2a0d092466c2f",
-                            "bin": "geth-windows-amd64-1.6.7-ab5646c5\\geth.exe"
+                            "bin": "gwhale-windows-amd64-1.6.7-ab5646c5\\gwhale.exe"
                         },
-                        "bin": "geth.exe",
+                        "bin": "gwhale.exe",
                         "commands": {
                             "sanity": {
                                 "args": [
@@ -90,12 +90,12 @@
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-386-1.6.7-ab5646c5.zip",
+                            "url": "https://gwhalestore.blob.core.windows.net/builds/gwhale-windows-386-1.6.7-ab5646c5.zip",
                             "type": "zip",
                             "md5": "44f66ec3565ee5b88929af8178a34027",
-                            "bin": "geth-windows-386-1.6.7-ab5646c5\\geth.exe"
+                            "bin": "gwhale-windows-386-1.6.7-ab5646c5\\gwhale.exe"
                         },
-                        "bin": "geth.exe",
+                        "bin": "gwhale.exe",
                         "commands": {
                             "sanity": {
                                 "args": [
