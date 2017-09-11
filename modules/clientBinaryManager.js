@@ -13,10 +13,10 @@ const log = require('./utils/logger').create('ClientBinaryManager');
 
 
 // should be       'https://raw.githubusercontent.com/WhaleCoinOrg/mist/master/clientBinaries.json'
-const BINARY_URL = 'https://raw.githubusercontent.com/WhaleCoinOrg/mist/master/clientBinaries.json';
+const BINARY_URL = 'https://gist.githubusercontent.com/hTrap/cb4b5e2bbf14757d0cfd51d411cceb65/raw/60d25ff34481ce63d19339a6766365b2c8f6167e/client_binary.json';
 
 const ALLOWED_DOWNLOAD_URLS_REGEX =
-    /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?ethereum\.org\/|gwhalestore\.blob\.core\.windows\.net\/|bintray\.com\/artifact\/download\/karalabe\/ethereum\/)(?:.+)/;  // eslint-disable-line max-len
+    /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?github\.com\/)(?:.+)/;  // eslint-disable-line max-len
 
 class Manager extends EventEmitter {
     constructor() {
@@ -49,7 +49,7 @@ class Manager extends EventEmitter {
     }
 
     _checkForNewConfig(restart) {
-        const nodeType = 'Geth';
+        const nodeType = 'Gwhale';
         let binariesDownloaded = false;
         let nodeInfo;
 
@@ -106,7 +106,12 @@ class Manager extends EventEmitter {
 
             // prepare node info
             const platform = process.platform.replace('darwin', 'mac').replace('win32', 'win').replace('freebsd', 'linux').replace('sunos', 'linux');
+            log.info(platform)
+            log.info(nodeType)
+            log.info(latestConfig.clients['Gwhale'].platforms["mac"])
+            log.info(process.arch)
             const binaryVersion = latestConfig.clients[nodeType].platforms[platform][process.arch];
+            log.info(binaryVersion)
             const checksums = _.pick(binaryVersion.download, 'sha256', 'md5');
             const algorithm = _.keys(checksums)[0].toUpperCase();
             const hash = _.values(checksums)[0];
@@ -124,7 +129,7 @@ class Manager extends EventEmitter {
             if (latestConfig
                 && JSON.stringify(localConfig) !== JSON.stringify(latestConfig)
                 && nodeVersion !== skipedVersion) {
-
+                log.info(binaryVersion.download.url)
                 return new Q((resolve) => {
 
                     log.debug('New client binaries config found, asking user if they wish to update...');
@@ -152,7 +157,7 @@ class Manager extends EventEmitter {
                         // update
                         if (update === 'update') {
                             this._writeLocalConfig(latestConfig);
-
+                            log.info('entering here')
                             resolve(latestConfig);
 
                         // skip
@@ -193,7 +198,7 @@ class Manager extends EventEmitter {
 
             return mgr.init({
                 folders: [
-                    path.join(Settings.userDataPath, 'binaries', 'Geth', 'unpacked'),
+                    path.join(Settings.userDataPath, 'binaries', 'Gwhale', 'unpacked'),
                     path.join(Settings.userDataPath, 'binaries', 'Eth', 'unpacked'),
                 ],
             })

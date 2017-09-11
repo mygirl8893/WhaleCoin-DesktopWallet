@@ -1,4 +1,4 @@
-
+`
 (function () {
     var EventEmitter = window.EventEmitter;
 
@@ -13,7 +13,7 @@
     // on events are: "connect", "data", "error", "end", "timeout"
     // "data" will get notifications
 
-    function WhaleCoinProvider() {
+    function EthereumProvider() {
         var _this = this;
         // Call constructor of superclass to initialize superclass-derived members.
         EventEmitter.call(this);
@@ -81,8 +81,8 @@
         });
     }
 
-    WhaleCoinProvider.prototype = Object.create(EventEmitter.prototype);
-    WhaleCoinProvider.prototype.constructor = WhaleCoinProvider;
+    EthereumProvider.prototype = Object.create(EventEmitter.prototype);
+    EthereumProvider.prototype.constructor = EthereumProvider;
 
     /**
      Get the adds a callback to the responseCallbacks object,
@@ -90,7 +90,7 @@
 
      @method _addResponseCallback
      */
-    WhaleCoinProvider.prototype._addResponseCallback = function(payload, callback) {
+    EthereumProvider.prototype._addResponseCallback = function(payload, callback) {
         var id = payload.id || payload[0].id;
         var method = payload.method || payload[0].method;
 
@@ -108,7 +108,7 @@
 
      @method _reconnectCheck
      */
-    WhaleCoinProvider.prototype._reconnectCheck = function() {
+    EthereumProvider.prototype._reconnectCheck = function() {
         var _this = this;
         var reconnectIntervalId;
 
@@ -130,7 +130,7 @@
 
      @method connect
      */
-    WhaleCoinProvider.prototype._connect = function(payload, callback) {
+    EthereumProvider.prototype._connect = function(payload, callback) {
         postMessage({
             type: 'create'
         });
@@ -144,7 +144,7 @@
      @param {Function} callback the callback to call
      */
     // TODO transform to: send(method, params, callback)
-    WhaleCoinProvider.prototype.send = function send(payload, callback) {
+    EthereumProvider.prototype.send = function send(payload, callback) {
 
         this._addResponseCallback(payload, callback);
         postMessage({
@@ -158,18 +158,18 @@
 
     delete window.EventEmitter;
     // TODO set real ethereum provider
-    // window.ethereum = new WhaleCoinProvider();
+    // window.ethereum = new EthereumProvider();
 
 
     // For backwards compatibility of web3.currentProvider;
-    WhaleCoinProvider.prototype.sendSync = function () {
+    EthereumProvider.prototype.sendSync = function () {
         return {jsonrpc: '2.0', error: {"code": -32603, message: 'Sync calls are not anymore supported in Mist :\\'}};
     };
-    WhaleCoinProvider.prototype.sendAsync = WhaleCoinProvider.prototype.send;
-    WhaleCoinProvider.prototype.isConnected = function () {
+    EthereumProvider.prototype.sendAsync = EthereumProvider.prototype.send;
+    EthereumProvider.prototype.isConnected = function () {
         return true;
     };
     window.web3 = {
-        currentProvider: new WhaleCoinProvider()
+        currentProvider: new EthereumProvider()
     };
 })();

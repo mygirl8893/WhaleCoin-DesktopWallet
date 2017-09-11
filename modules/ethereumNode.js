@@ -442,7 +442,7 @@ class WhaleCoinNode extends EventEmitter {
 
                         if (nodeType === 'gwhale') {
                             if (dataStr.indexOf('fatal: error') >= 0) {
-                                const err = new Error(`Geth error: ${dataStr}`);
+                                const err = new Error(`Gwhale error: ${dataStr}`);
 
                                 if (dataStr.indexOf('bind') >= 0) {
                                     err.tag = UNABLE_TO_BIND_PORT_ERROR;

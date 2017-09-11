@@ -20,8 +20,8 @@ mistInit = function () {
 
             Tabs.insert({
                 _id: 'browser',
-                url: 'https://ethereum.org',
-                redirect: 'https://ethereum.org',
+                url: 'https://whalecoin.org',
+                redirect: 'https://whalecoin.org',
                 position: 0
             });
         } else {
@@ -38,8 +38,8 @@ mistInit = function () {
             { _id: 'wallet' },
             {
                 $set: {
-                    url: 'https://wallet.ethereum.org',
-                    redirect: 'https://wallet.ethereum.org',
+                    url: 'https://wallet.whalecoin.org',
+                    redirect: 'https://wallet.whalecoin.org',
                     position: 1,
                     permissions: {
                         admin: true

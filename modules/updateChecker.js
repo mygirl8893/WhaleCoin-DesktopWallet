@@ -24,7 +24,7 @@ const check = exports.check = () => {
         break;
     }
 
-    return got('https://api.github.com/repos/WhaleCoinOrg/mist/releases', {
+    return got('https://api.github.com/repos/ethereum/mist/releases', {
         timeout: 3000,
         json: true,
     })
