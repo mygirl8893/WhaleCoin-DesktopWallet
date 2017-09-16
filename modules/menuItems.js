@@ -354,6 +354,7 @@ let menuTempl = function (webviews) {
     const devToolsMenu = [];
 
     // change for wallet
+
     if (Settings.uiMode === 'mist') {
         devtToolsSubMenu = [{
             label: i18n.t('mist.applicationMenu.develop.devToolsMistUI'),
@@ -395,7 +396,7 @@ let menuTempl = function (webviews) {
         label: i18n.t('mist.applicationMenu.develop.devTools'),
         submenu: devtToolsSubMenu,
     });
-
+/*
     if (Settings.uiMode === 'mist') {
         devToolsMenu.push({
             label: i18n.t('mist.applicationMenu.develop.openRemix'),
@@ -414,7 +415,7 @@ let menuTempl = function (webviews) {
                 });
             },
         });
-    }
+    }*/
 
     devToolsMenu.push({
         label: i18n.t('mist.applicationMenu.develop.runTests'),
@@ -453,7 +454,7 @@ let menuTempl = function (webviews) {
         if (gwhaleClient) {
             nodeSubmenu.push(
                 {
-                    label: `Geth ${gwhaleClient.version} (Go)`,
+                    label: `Gwhale ${gwhaleClient.version} (Go)`,
                     checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
                     enabled: ethereumNode.isOwnNode,
                     type: 'checkbox',

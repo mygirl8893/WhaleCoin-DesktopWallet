@@ -366,22 +366,11 @@ class WhaleCoinNode extends EventEmitter {
                 case 'test':
                     args = (nodeType === 'gwhale') ? [
                         '--testnet',
-                        '--fast',
                         '--cache', ((process.arch === 'x64') ? '1024' : '512'),
                         '--ipcpath', Settings.rpcIpcPath
                     ] : [
                         '--morden',
                         '--unsafe-transactions'
-                    ];
-                    break;
-
-                // STARTS RINKEBY
-                case 'rinkeby':
-                    args = [
-                        '--rinkeby',
-                        '--fast',
-                        '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                        '--ipcpath', Settings.rpcIpcPath
                     ];
                     break;
 
@@ -395,7 +384,7 @@ class WhaleCoinNode extends EventEmitter {
                 // STARTS MAINNET
                 default:
                     args = (nodeType === 'gwhale')
-                        ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512')]
+                        ? ['--cache', ((process.arch === 'x64') ? '1024' : '512')]
                         : ['--unsafe-transactions'];
                 }
 

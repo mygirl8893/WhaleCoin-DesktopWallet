@@ -68,12 +68,12 @@ const argv = require('yargs')
         },
         gwhalepath: {
             demand: false,
-            describe: 'Path to Geth executable to use instead of default.',
+            describe: 'Path to Gubiq executable to use instead of default.',
             requiresArg: true,
             nargs: 1,
             type: 'string',
             group: 'Mist options:',
-        },
+        },/*
         ethpath: {
             demand: false,
             describe: 'Path to Eth executable to use instead of default.',
@@ -81,7 +81,7 @@ const argv = require('yargs')
             nargs: 1,
             type: 'string',
             group: 'Mist options:',
-        },
+        },*/
         'ignore-gpu-blacklist': {
             demand: false,
             describe: 'Ignores GPU blacklist (needed for some Linux installations).',
@@ -213,10 +213,10 @@ class Settings {
     get gwhalePath() {
         return argv.gwhalepath;
     }
-
+    /*
     get ethPath() {
         return argv.ethpath;
-    }
+    }*/
 
     get rpcMode() {
         if (argv.rpc && argv.rpc.indexOf('http') === 0)

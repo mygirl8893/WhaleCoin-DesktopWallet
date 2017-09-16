@@ -1,4 +1,4 @@
-/**
+ /**
 Window communication
 
 @module ipcCommunicator
@@ -130,9 +130,8 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
 
             log.debug(`Importing ${type} account...`);
 
-            if (type === 'ethersale') {
-                e.sender.send('uiAction_checkedWalletFile', null, 'presale');
-            } else if (type === 'web3') {
+           
+            if (type === 'web3') {
                 e.sender.send('uiAction_checkedWalletFile', null, 'web3');
 
                 let keystorePath = Settings.userHomePath;

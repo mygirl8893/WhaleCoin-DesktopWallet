@@ -44,7 +44,7 @@
                 "runTests": "Tests durchführen",
                 "logFiles": "Logdatei anzeigen",
                 "openRemix": "Remix IDE öffnen",
-                "ethereumNode": "WhaleCoin Softwareknoten",
+                "WhaleCoinNode": "WhaleCoin Softwareknoten",
                 "network": "Netzwerk",
                 "mainNetwork": "Hauptnetzwerk",
                 "startMining": "⛏ Mining starten (nur auf Testnetz)",
@@ -81,7 +81,7 @@
             },
             "legacyChain": {
                 "title": "Veraltete Chain erkannt",
-                "description": "Dein Softwareknoten ist zur Zeit auf der nicht unterstützten WhaleCoin Classic Chain. Um diese Chain zu nutzen, verwende die Tools vom WhaleCoin Classic Project unter\nhttps://ethereumclassic.github.io.\n\nUm zur Hauptchain von WhaleCoin zurückzukehren, folge den Schritten in diesem Tutorial:\nhttps://github.com/WhaleCoinOrg/mist/releases/0.8.2"
+                "description": "Dein Softwareknoten ist zur Zeit auf der nicht unterstützten WhaleCoin Classic Chain. Um diese Chain zu nutzen, verwende die Tools vom WhaleCoin Classic Project unter\nhttps://WhaleCoinclassic.github.io.\n\nUm zur Hauptchain von WhaleCoin zurückzukehren, folge den Schritten in diesem Tutorial:\nhttps://github.com/WhaleCoinOrg/mist/releases/0.8.2"
             }
         },
         "rightClick": {
@@ -94,14 +94,14 @@
             "blockReceived": "Neuer Block empfangen",
             "timeSinceBlock": "Abgelaufene Zeit seit dem letzten Block",
             "blockNumber": "Ihre letzte Blocknummer",
-            "testnetExplain": "Du bist mit dem Testnetz verbunden, SENDE KEINE echten Ether an diese Adressen",
+            "testnetExplain": "Du bist mit dem Testnetz verbunden, SENDE KEINE echten WhaleCoin an diese Adressen",
             "peers": "Peers",
             "checkingWhichNetwork": "Überprüfe Netzwerk...",
             "mainNetwork": "Hauptnetzwerk",
             "testNetwork": "Testnetzwerk",
             "privateNetwork": "Privates Netzwerk",
             "mainnetExplain": "Du bist mit dem globalen Hauptnetz von WhaleCoin verbunden",
-            "privatenetExplain": "Du bist mit einem privaten Netz verbunden, SENDE KEINE echten Ether an diese Adressen",
+            "privatenetExplain": "Du bist mit einem privaten Netz verbunden, SENDE KEINE echten WhaleCoin an diese Adressen",
             "unknownnetExplain": "Es konnte nicht bestimmt werden, welches Netzwerk du nutzt"
         },
         "sidebar": {
@@ -119,8 +119,8 @@
             "runningNodeFound": "Laufender WhaleCoin Softwareknoten gefunden!",
             "startingNode": "Starte WhaleCoin Softwareknoten...",
             "startedNode": "Starte Anwendung...",
-            "nodeConnectionTimeout": "WhaleCoin Softwareknoten konnte nicht gestartet werden!<br><small>Wenn du <a href='https://www.ethereum.org/cli#gwhale' class='button' target='_blank'>Geth installiert hast,</a>, verwende bitte diesen Befehl, um Geth zu starten: <br> <code>gwhale --ipcpath __path__</code></small><br> <small><a href='https://github.com/WhaleCoinOrg/mist/issues' class='button' target='_blank'>oder sende einen Fehlerreport</a></small>",
-            "nodeBinaryNotFound": "Keine Programmdatei für den WhaleCoin Softwareknoten gefunden!<br><small> <a href='https://www.ethereum.org/cli#gwhale' class='button' target='_blank'> Bitte starte den WhaleCoin Softwareknoten manuell. </a> </small>",
+            "nodeConnectionTimeout": "WhaleCoin Softwareknoten konnte nicht gestartet werden!<br><small>Wenn du <a href='https://www.WhaleCoin.org/cli#gwhale' class='button' target='_blank'>Geth installiert hast,</a>, verwende bitte diesen Befehl, um Geth zu starten: <br> <code>gwhale --ipcpath __path__</code></small><br> <small><a href='https://github.com/WhaleCoinOrg/mist/issues' class='button' target='_blank'>oder sende einen Fehlerreport</a></small>",
+            "nodeBinaryNotFound": "Keine Programmdatei für den WhaleCoin Softwareknoten gefunden!<br><small> <a href='https://www.WhaleCoin.org/cli#gwhale' class='button' target='_blank'> Bitte starte den WhaleCoin Softwareknoten manuell. </a> </small>",
             "nodeSyncing": "WhaleCoin Softwareknoten muss synchronisieren, bitte warten...",
             "nodeSyncInfo": "Block __displayBlock__ von __highestBlock__ wird heruntergeladen.",
             "nodeSyncConnecting": "Suche nach Peers...",
@@ -178,7 +178,7 @@
                 "estimatedFee": "Geschätzter Gebührenbetrag",
                 "estimatedGasError": "Der Auftrag kann nicht ausgeführt werden, da er das gesamte vorgegebene Gas verbrauchen würde.",
                 "gasPrice": "Gaspreis",
-                "perMillionGas": "Ether pro Millionen Gas",
+                "perMillionGas": "WhaleCoin pro Millionen Gas",
                 "data": "Daten",
                 "buttons": {
                     "sendTransaction": "Transaktion absenden"
@@ -187,7 +187,7 @@
                     "connectionTimeout": "Eine Verbindung mit dem Softwareknoten war nicht möglich, eventuell ist der Softwareknoten im Hintergrund abgestürzt?",
                     "wrongPassword": "Falsches Passwort",
                     "multipleKeysMatchAddress": "Mehrere Konten stimmen mit der Adresse überein, bitte entferne Duplikate aus dem keystore Verzeichnis (Menü -> Konten -> Sicherung -> Konten)",
-                    "insufficientFundsForGas": "Zu wenig Mittel im Hauptkonto (etherbase) um für Gas zu bezahlen",
+                    "insufficientFundsForGas": "Zu wenig Mittel im Hauptkonto (WhaleCoinbase) um für Gas zu bezahlen",
                     "sameAccount": "Kann nicht zum gleichen Konto schicken."
                 },
                 "transactionThrow": "Der Vertrag wird diese Transaktion nicht ausführen können",
@@ -204,9 +204,9 @@
                 "goToTestnet": "Verwende das Testnetz (Rinkeby)",
                 "goToTestnetDescription": "Teste die Technologie frei in der Testnetz-Sandbox, ",
                 "gotoMainnet": "Verwende das Hauptnetz",
-                "gotoMainnetDescription": " Du wirst etwas Ether benötigen, um Verträge anzulegen und auszuführen. Wir werden dir helfen, etwas zu bekommen ...",
+                "gotoMainnetDescription": " Du wirst etwas WhaleCoin benötigen, um Verträge anzulegen und auszuführen. Wir werden dir helfen, etwas zu bekommen ...",
                 "doYouHaveAWalletFile": "Hast du eine Wallet-Datei?",
-                "walletFileDescription": "<p>Wallet-Datei zum importieren in dieses Fenster ziehen.<br>Wenn du 2014 am WhaleCoin-Pre-sale teilgenommen hast, solltest du über eine Datei mit dem Dateinamen <code>ethereum_wallet_backup.json</code> verfügen. Sie wurde nach dem Kauf heruntergeladen und dir auch per E-Mail geschickt.</p>",
+                "walletFileDescription": "<p>Wallet-Datei zum importieren in dieses Fenster ziehen.<br>Wenn du 2014 am WhaleCoin-Pre-sale teilgenommen hast, solltest du über eine Datei mit dem Dateinamen <code>WhaleCoin_wallet_backup.json</code> verfügen. Sie wurde nach dem Kauf heruntergeladen und dir auch per E-Mail geschickt.</p>",
                 "dropFilesHere": "Pre-sale Datei laden",
                 "creating": "Erstellen...",
                 "importing": "Importieren...",
@@ -215,12 +215,12 @@
                 "protectTitle": "Schütze dein Konto",
                 "protectDescription": "Wähle ein Passwort für dein Konto. Mache es so stark, als wären es deine Hausschlüssel!",
                 "accountTitle": "Lade die Datei hoch!",
-                "accountTitleTestnet": "Ether minen!",
-                "etherDescription": "Das WhaleCoin Netz basiert auf einem Tokan namens “Ether”. Du benötigst eine kleine Menge davon, um irgendetwas auf dem WhaleCoin-Netz zu tun.",
-                "loadItDescription": "Wenn du bereits über Bitcoin oder eine andere Kryptowährung verfügst, kannst du diese mit Shapeshift einfach in Ether umtauschen. <br><br> Wir empfehlen, ca. <strong>0.25 bis 1 ether</strong> einzutauschen.",
-                "mineItDescription": "<strong>Auf dem Testnetz kannst du selbst Ether minen. Bitte gehe dazu in den Menüpunkt <em>Entwicklung</em> menu und wähle <em>Mining starten</em>. </strong> <br> <strong> VERSUCHE NICHT, ECHTE ETHER AN DIESE ADRESSE ZU SENDEN! </strong>",
+                "accountTitleTestnet": "WhaleCoin minen!",
+                "WhaleCoinDescription": "Das WhaleCoin Netz basiert auf einem Tokan namens “WhaleCoin”. Du benötigst eine kleine Menge davon, um irgendetwas auf dem WhaleCoin-Netz zu tun.",
+                "loadItDescription": "Wenn du bereits über Bitcoin oder eine andere Kryptowährung verfügst, kannst du diese mit Shapeshift einfach in WhaleCoin umtauschen. <br><br> Wir empfehlen, ca. <strong>0.25 bis 1 WhaleCoin</strong> einzutauschen.",
+                "mineItDescription": "<strong>Auf dem Testnetz kannst du selbst WhaleCoin minen. Bitte gehe dazu in den Menüpunkt <em>Entwicklung</em> menu und wähle <em>Mining starten</em>. </strong> <br> <strong> VERSUCHE NICHT, ECHTE WhaleCoin AN DIESE ADRESSE ZU SENDEN! </strong>",
                 "you": "DU",
-                "etherbase": "Hauptkonto (etherbase)",
+                "WhaleCoinbase": "Hauptkonto (WhaleCoinbase)",
                 "depositBitcoin": "Bitcoin eintauschen",
                 "learnIt": "Lerne WhaleCoin kennen, während du wartest",
                 "downloadingBlocks": "Blöcke werden heruntergeladen",

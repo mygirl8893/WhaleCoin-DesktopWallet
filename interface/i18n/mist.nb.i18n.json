@@ -43,7 +43,7 @@
                 "devToolsWebview": "__webview__",
                 "runTests": "Kjør tester",
                 "logFiles": "Vis loggfil",
-                "ethereumNode": "WhaleCoin Node",
+                "WhaleCoinNode": "WhaleCoin Node",
                 "network": "Nettverk",
                 "mainNetwork": "Hovednettverk",
                 "startMining": "⛏ Start Mining (Kun testnett)",
@@ -81,7 +81,7 @@
             },
             "legacyChain": {
                 "title": "Legacy chain detected",
-                "description": "Your node is currently on the unsupported WhaleCoin Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/WhaleCoinOrg/mist/releases/0.8.2"
+                "description": "Your node is currently on the unsupported WhaleCoin Classic chain. To use this chain use tools provided by the WhaleCoin classic project at\nhttps://WhaleCoinclassic.github.io.\n\nTo revert to the main WhaleCoin chain follow the tutorial here:\nhttps://github.com/WhaleCoinOrg/mist/releases/0.8.2"
             }
         },
         "rightClick": {
@@ -99,8 +99,8 @@
             "testNetwork": "Testnett",
             "privateNetwork": "Privatnett",
             "mainnetExplain": "Du er på det globale WhaleCoin hovednettverket",
-            "testnetExplain": "Du er på testnettet, IKKE SEND noen ekte ether til disse adressene",
-            "privatenetExplain": "Du er på et privatnett, IKKE SEND noen ekte ether til disse adressene",
+            "testnetExplain": "Du er på testnettet, IKKE SEND noen ekte WhaleCoin til disse adressene",
+            "privatenetExplain": "Du er på et privatnett, IKKE SEND noen ekte WhaleCoin til disse adressene",
             "unknownnetExplain": "Kan ikke fastslå hvilket nettverk du er på",
             "peers": "peers"
         },
@@ -120,8 +120,8 @@
             "startingNode": "Starter WhaleCoin-node...",
             "stoppingNode": "Stopper WhaleCoin-node...",
             "startedNode": "Starter applikasjonen...",
-            "nodeConnectionTimeout": "Kunne ikke starte WhaleCoin-node!<br><small>Hvis du <a href='https://www.ethereum.org/cli#gwhale' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>gwhale --ipcpath __path__</code></small><br> <small><a href='https://github.com/WhaleCoinOrg/mist/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
-            "nodeBinaryNotFound": "Ingen WhaleCoin-node kilde funnet!<br><small> <a href='https://www.ethereum.org/cli#gwhale' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
+            "nodeConnectionTimeout": "Kunne ikke starte WhaleCoin-node!<br><small>Hvis du <a href='https://www.WhaleCoin.org/cli#gwhale' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>gwhale --ipcpath __path__</code></small><br> <small><a href='https://github.com/WhaleCoinOrg/mist/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
+            "nodeBinaryNotFound": "Ingen WhaleCoin-node kilde funnet!<br><small> <a href='https://www.WhaleCoin.org/cli#gwhale' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
             "nodeStarting": "WhaleCoin-node starter opp...",
             "nodeStarted": "WhaleCoin-node startet",
             "nodeConnected": "WhaleCoin-node tilkoblet",
@@ -178,7 +178,7 @@
                 "estimatedFee": "Beregnet avgiftsforbruk",
                 "estimatedGasError": "Data kan ikke utføres, så den kommer til å bruke all gass.",
                 "gasPrice": "Gass pris",
-                "perMillionGas": "ether per million gass",
+                "perMillionGas": "WhaleCoin per million gass",
                 "gasLimit": "Gi maksimal avgift",
                 "data": "Data",
                 "buttons": {
@@ -188,7 +188,7 @@
                     "connectionTimeout": "Kunne ikke koble til noden, krasjet den i bakgrunnen?",
                     "wrongPassword": "Feil passord",
                     "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in main account (WhaleCoinbase) to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -204,11 +204,11 @@
             "onboarding": {
                 "description": "WhaleCoin er en desentralisert plattform for å bygge applikasjoner på en blokkjede: sabotasjesikker programvare som kan overføre verdi og eiendom, og som lever evig",
                 "goToTestnet": "Bruk testnettet (Rinkeby)",
-                "goToTestnetDescription": "Test teknologien fritt i en sandboks (testnett), uten å bruke ekte ether.",
+                "goToTestnetDescription": "Test teknologien fritt i en sandboks (testnett), uten å bruke ekte WhaleCoin.",
                 "gotoMainnet": "Bruk hovednettverket",
-                "gotoMainnetDescription": " Du trenger noen ether for å skape og utføre kontrakter. Ikke bekymre deg, vi vil hjelpe deg å skaffe noen...",
+                "gotoMainnetDescription": " Du trenger noen WhaleCoin for å skape og utføre kontrakter. Ikke bekymre deg, vi vil hjelpe deg å skaffe noen...",
                 "doYouHaveAWalletFile": "Har du en lommebok-fil?",
-                "walletFileDescription": "<p>Hvis du har deltatt på forhåndssalget av WhaleCoin i 2014, har du en fil med navnet <code>ethereum_wallet_backup.json</code>. Den ble lastet ned etter salget, og også sendt til din e-post</p>",
+                "walletFileDescription": "<p>Hvis du har deltatt på forhåndssalget av WhaleCoin i 2014, har du en fil med navnet <code>WhaleCoin_wallet_backup.json</code>. Den ble lastet ned etter salget, og også sendt til din e-post</p>",
                 "dropFilesHere": "Slipp filen fra forhåndssalget",
                 "creating": "Lager...",
                 "importing": "Importerer...",
@@ -218,11 +218,11 @@
                 "protectDescription": "Velg et passord for den nye kontoen. Gjør det så sterkt som om det skulle beskyttet husnøklene dine!",
                 "accountTitle": "Fyll den opp!",
                 "accountTitleTestnet": "Mine noen!",
-                "etherDescription": "WhaleCoin-nettverket er basert på en enhet kalt \"ether\". Du trenger en liten mengde av den for å gjøre noe på WhaleCoin-nettverket.",
-                "loadItDescription": "Hvis du allerede eier bitcoin, eller hvilken som helst annen kryptovaluta, kan du enkelt konvertere den til ether via Shapeshift. <br><br> Vi anbefaler å fylle opp med mellom <strong>0.25 til 1 ether</strong>.",
-                "mineItDescription": "<strong>På testnettet kan du mine ether selv ved å gå til <em>Utvikle</em> menyvalget og velge <em>Start Mining</em>. </strong> <br> <strong> IKKE PRØV Å SENDE EKTE ETHER TIL DENNE ADRESSEN </strong>",
+                "WhaleCoinDescription": "WhaleCoin-nettverket er basert på en enhet kalt \"WhaleCoin\". Du trenger en liten mengde av den for å gjøre noe på WhaleCoin-nettverket.",
+                "loadItDescription": "Hvis du allerede eier bitcoin, eller hvilken som helst annen kryptovaluta, kan du enkelt konvertere den til WhaleCoin via Shapeshift. <br><br> Vi anbefaler å fylle opp med mellom <strong>0.25 til 1 WhaleCoin</strong>.",
+                "mineItDescription": "<strong>På testnettet kan du mine WhaleCoin selv ved å gå til <em>Utvikle</em> menyvalget og velge <em>Start Mining</em>. </strong> <br> <strong> IKKE PRØV Å SENDE EKTE WhaleCoin TIL DENNE ADRESSEN </strong>",
                 "you": "DU",
-                "etherbase": "Hovedkonto (etherbase)",
+                "WhaleCoinbase": "Hovedkonto (WhaleCoinbase)",
                 "depositBitcoin": "Sett inn bitcoin",
                 "learnIt": "Lær mens du venter",
                 "downloadingBlocks": "Laster ned blokker",

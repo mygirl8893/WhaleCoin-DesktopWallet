@@ -43,7 +43,7 @@
                 "devToolsWebview": "__webview__",
                 "runTests": "Запустить тесты",
                 "logFiles": "Показать журнал",
-                "ethereumNode": "WhaleCoin-нода",
+                "WhaleCoinNode": "WhaleCoin-нода",
                 "network": "Сеть",
                 "mainNetwork": "Основная сеть",
                 "startMining": "⛏ Запустить майнинг (только для тестовой сети)",
@@ -81,7 +81,7 @@
             },
             "legacyChain": {
                 "title": "Legacy chain detected",
-                "description": "Your node is currently on the unsupported WhaleCoin Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/WhaleCoinOrg/mist/releases/0.8.2"
+                "description": "Your node is currently on the unsupported WhaleCoin Classic chain. To use this chain use tools provided by the WhaleCoin classic project at\nhttps://WhaleCoinclassic.github.io.\n\nTo revert to the main WhaleCoin chain follow the tutorial here:\nhttps://github.com/WhaleCoinOrg/mist/releases/0.8.2"
             }
         },
         "rightClick": {
@@ -120,8 +120,8 @@
             "startingNode": "Запуск WhaleCoin-ноды...",
             "stoppingNode": "Остановка WhaleCoin-ноды...",
             "startedNode": "Запуск приложения...",
-            "nodeConnectionTimeout": "Не удалось запустить WhaleCoin-ноду!<br><small>Если вы <a href='https://www.ethereum.org/cli#gwhale' class='button' target='_blank'>установили Geth</a>, используйте следующую команду для запуска: <br> <code>gwhale --ipcpath __path__</code></small><br> <small><a href='https://github.com/WhaleCoinOrg/mist/issues' class='button' target='_blank'> Либо сообщите от проблеме </a></small>",
-            "nodeBinaryNotFound": "Не найдены программные файлы для WhaleCoin-ноды!<br><small> <a href='https://www.ethereum.org/cli#gwhale' class='button' target='_blank'> Пожалуйста, для начала изучите руководство. </a> </small>",
+            "nodeConnectionTimeout": "Не удалось запустить WhaleCoin-ноду!<br><small>Если вы <a href='https://www.WhaleCoin.org/cli#gwhale' class='button' target='_blank'>установили Geth</a>, используйте следующую команду для запуска: <br> <code>gwhale --ipcpath __path__</code></small><br> <small><a href='https://github.com/WhaleCoinOrg/mist/issues' class='button' target='_blank'> Либо сообщите от проблеме </a></small>",
+            "nodeBinaryNotFound": "Не найдены программные файлы для WhaleCoin-ноды!<br><small> <a href='https://www.WhaleCoin.org/cli#gwhale' class='button' target='_blank'> Пожалуйста, для начала изучите руководство. </a> </small>",
             "nodeStarting": "WhaleCoin-нода запускается...",
             "nodeStarted": "WhaleCoin-нода запущена",
             "nodeConnected": "WhaleCoin-нода подключена",
@@ -190,7 +190,7 @@
                     "connectionTimeout": "Не удается подключиться к ноде, возможно завершилось фоновое приложение?",
                     "wrongPassword": "Неверный пароль",
                     "multipleKeysMatchAddress": "У нескольких ключей совпадает адрес, удалите дубликаты из хранилища ключей (Меню -> Аккаунты -> Резервное копирование -> Аккаунтов)",
-                    "insufficientFundsForGas": "Недостаточно средств на основном счете (ETHERBASE) чтобы заплатить за газ",
+                    "insufficientFundsForGas": "Недостаточно средств на основном счете (WhaleCoinBASE) чтобы заплатить за газ",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -204,13 +204,13 @@
                 "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
             },
             "onboarding": {
-                "description": "Etherium представляет собой децентрализованную платформу основанную на блокчейне для создания надежных и децентрализованных приложений",
+                "description": "WhaleCoinium представляет собой децентрализованную платформу основанную на блокчейне для создания надежных и децентрализованных приложений",
                 "goToTestnet": "Использовать тестовую сеть (Rinkeby)",
                 "goToTestnetDescription": "Свободное тестирование технологии в тестовой сети (sandbox), без использования реального эфира.",
                 "gotoMainnet": "Использовать основную сеть",
                 "gotoMainnetDescription": "Вам потребуется некоторое количество эфира для того, чтобы создавать и выполнять контракты. Не волнуйтесь, мы вам поможем получить некоторое количество...",
                 "doYouHaveAWalletFile": "У вас есть файл кошелька?",
-                "walletFileDescription": "<p>Если вы участвовали в WhaleCoin Pre-sale 2014, у вас должен быть файл с именем <code>ethereum_wallet_backup.json</code>. Он был загружен после продажи, а также отправлен на электронную почту</p>",
+                "walletFileDescription": "<p>Если вы участвовали в WhaleCoin Pre-sale 2014, у вас должен быть файл с именем <code>WhaleCoin_wallet_backup.json</code>. Он был загружен после продажи, а также отправлен на электронную почту</p>",
                 "dropFilesHere": "Перетащите сюда ваш файл",
                 "creating": "Создание...",
                 "importing": "Импорт...",
@@ -219,11 +219,11 @@
                 "protectTitle": "Защитите ваш аккаунт",
                 "protectDescription": "Выберите пароль для новой учетной записи. Придумайте такой пароль, как будто он защитит ваши ключи от дома!",
                 "accountTitle": "Загрузите его!",
-                "etherDescription": "Сеть WhaleCoin основана на маркерах называемых “Ether” (Эфир). Он вам необходим в небольшом количетсве для того, что бы что-либо сделать в сети Etherium.",
-                "loadItDescription": "Если у вас уже есть Bitcoin, или любая другая криптовалюта, вы можете легко преобразовать её в эфир (Ether) с помощью Shapeshift. <br><br> Мы рекомендуем загрузить где-то <strong>от 0.25 до 1 эфира</strong>.",
+                "WhaleCoinDescription": "Сеть WhaleCoin основана на маркерах называемых “WhaleCoin” (Эфир). Он вам необходим в небольшом количетсве для того, что бы что-либо сделать в сети WhaleCoinium.",
+                "loadItDescription": "Если у вас уже есть Bitcoin, или любая другая криптовалюта, вы можете легко преобразовать её в эфир (WhaleCoin) с помощью Shapeshift. <br><br> Мы рекомендуем загрузить где-то <strong>от 0.25 до 1 эфира</strong>.",
                 "mineItDescription": "<strong>В тестовой сети вы можете добыть (намайнить) эфир сами, перейдя в меню <em>Дополнительно</em> и выбрав <em>Запустить майнинг</em>. </strong> <br> <strong> НЕ ПЫТАЙТЕСЬ ОТПРАВИТЬ РЕАЛЬНЫЙ ЭФИР НА ЭТОТ АДРЕС</strong>",
                 "you": "ВЫ",
-                "etherbase": "Основной аккаунт (etherbase)",
+                "WhaleCoinbase": "Основной аккаунт (WhaleCoinbase)",
                 "depositBitcoin": "Внести депозит через Bitcoin",
                 "viaShapeshift": "Мгновенное приобразование с помощью <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
                 "learnIt": "Изучайте, пока ожидаете",

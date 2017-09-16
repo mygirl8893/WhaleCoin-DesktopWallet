@@ -1,6 +1,6 @@
 # Mist Browser
 
-[![Join the chat at https://gitter.im/WhaleCoinOrg/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WhaleCoinOrg/mist?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status develop branch](https://travis-ci.org/WhaleCoinOrg/mist.svg?branch=develop)](https://travis-ci.org/WhaleCoinOrg/mist)
 [![Code Climate](https://codeclimate.com/github/WhaleCoinOrg/mist/badges/gpa.svg)](https://codeclimate.com/github/WhaleCoinOrg/mist)
 
@@ -109,9 +109,9 @@ $ electron . --rpc http://localhost:8545
 ```
 
 
-### Passing options to Geth
+### Passing options to Gwhale
 
-You can pass command-line options directly to Geth by prefixing them with `--node-` in
+You can pass command-line options directly to Gwhale by prefixing them with `--node-` in
 the command-line invocation:
 
 ```bash
