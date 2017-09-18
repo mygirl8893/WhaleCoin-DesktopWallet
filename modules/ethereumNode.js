@@ -362,17 +362,6 @@ class WhaleCoinNode extends EventEmitter {
                 let args;
 
                 switch (network) {
-                // STARTS ROPSTEN
-                case 'test':
-                    args = (nodeType === 'gwhale') ? [
-                        '--testnet',
-                        '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                        '--ipcpath', Settings.rpcIpcPath
-                    ] : [
-                        '--morden',
-                        '--unsafe-transactions'
-                    ];
-                    break;
 
                 case 'dev':
                     args = [
@@ -384,7 +373,11 @@ class WhaleCoinNode extends EventEmitter {
                 // STARTS MAINNET
                 default:
                     args = (nodeType === 'gwhale')
-                        ? ['--cache', ((process.arch === 'x64') ? '1024' : '512')]
+                        ? ['--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                        '--rpc',
+                        '--rpcport', '8545',
+                        '--rpcaddr', '0.0.0.0',
+                        '--rpccorsdomain', '*']
                         : ['--unsafe-transactions'];
                 }
 
