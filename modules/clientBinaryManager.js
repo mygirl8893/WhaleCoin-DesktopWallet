@@ -12,8 +12,7 @@ const EventEmitter = require('events').EventEmitter;
 const log = require('./utils/logger').create('ClientBinaryManager');
 
 
-// should be       'https://raw.githubusercontent.com/WhaleCoinOrg/mist/master/clientBinaries.json'
-const BINARY_URL = 'https://gist.githubusercontent.com/hTrap/cb4b5e2bbf14757d0cfd51d411cceb65/raw/60d25ff34481ce63d19339a6766365b2c8f6167e/client_binary.json';
+const BINARY_URL = 'https://raw.githubusercontent.com/WhaleCoinOrg/mist/master/clientBinaries.json';
 
 const ALLOWED_DOWNLOAD_URLS_REGEX =
     /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?github\.com\/)(?:.+)/;  // eslint-disable-line max-len
