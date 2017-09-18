@@ -8,7 +8,7 @@
                         "download": {
                             "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "c8ebc16355d3272f8cc76d0523031bd7",
+                            "md5": "10de709ded7458c65b3838b53694edf5",
                             "bin": "gwhale-linux-amd64/gwhale"
                         },
                         "bin": "gwhale",
@@ -52,7 +52,7 @@
                         "download": {
                             "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "2ff33349beefb813e3808592a1df7532",
+                            "md5": "951d3d014dc1ddb853a78a6578393f89",
                             "bin": "gwhale-windows-amd64\\gwhale.exe"
                         },
                         "bin": "gwhale.exe",
@@ -72,7 +72,7 @@
                         "download": {
                             "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-windows-386.zip",
                             "type": "zip",
-                            "md5": "e9cd1682e0473ef5b8d4eb5a7ac8e3a2",
+                            "md5": "44fa052576d2839bcd1324bc006507ff",
                             "bin": "gwhale-windows-386\\gwhale.exe"
                         },
                         "bin": "gwhale.exe",
