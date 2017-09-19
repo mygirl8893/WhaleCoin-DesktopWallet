@@ -29,7 +29,7 @@ RequestExecutionLevel admin
 !define GROUPNAME "WhaleCoin"
 !define HELPURL "https://github.com/WhaleCoinOrg/mist/releases/issues"
 !define UPDATEURL "https://github.com/WhaleCoinOrg/mist/releases"
-!define ABOUTURL "https://ethereum.org"
+!define ABOUTURL "https://WhaleCoin.org"
 !define /date NOW "%Y%m%d"
 
 ## These must be integers and can be set on the command line by NSIS with "/DMAJORVERSION=0 /DMINORVERSION=8 /DBUILDVERSION=7"
