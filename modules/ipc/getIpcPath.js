@@ -19,17 +19,17 @@ module.exports = function() {
     var path = Settings.userHomePath;
 
     if(process.platform === 'darwin') {
-        path += '/Library/Expanse/gexp.ipc';
+        path += '/Library/WhaleCoin/gwhale.ipc';
     }
 
     if(process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-        path += '/.expanse/gexp.ipc';
+        path += '/.whalecoin/gwhale.ipc';
     }
 
     if(process.platform === 'win32') {
-        path = '\\\\.\\pipe\\gexp.ipc';
+        path = '\\\\.\\pipe\\gwhale.ipc';
     }
 
     log.debug(`IPC path: ${path}`);

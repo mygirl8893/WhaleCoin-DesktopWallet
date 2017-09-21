@@ -21,9 +21,9 @@ module.exports = {
     stopNodes: function(callback) {
         log.info('Stopping nodes...');
 
-        var node = global.nodes.gexp || global.nodes.exp;
+        var node = global.nodes.gwhale || global.nodes.eth;
 
-        // kill running gexp
+        // kill running gwhale
         if(node) {
             node.stderr.removeAllListeners('data');
             node.stdout.removeAllListeners('data');
@@ -58,7 +58,7 @@ module.exports = {
     Starts a node of type
 
     @method startNode
-    @param {String} type the node e.g. "gexp" or "exp"
+    @param {String} type the node e.g. "gwhale" or "eth"
     @param {Boolean} testnet
     @param {Function} callback will be called after successfull start
     */
@@ -70,7 +70,7 @@ module.exports = {
 
         log.info('Start node from '+ binPath);
 
-        if(type === 'exp') {
+        if(type === 'eth') {
 
             var modalWindow = popupWindow.show('unlockMasterPassword', {width: 400, height: 220, alwaysOnTop: true}, null, null, true);
             modalWindow.on('closed', function() {
@@ -175,11 +175,11 @@ module.exports = {
 
             // START TESTNET
             if(testnet) {
-                args = (type === 'gexp') ? ['--testnet', '--fast'] : ['--morden', '--unsafe-transactions'];
+                args = (type === 'gwhale') ? ['--testnet', '--fast'] : ['--morden', '--unsafe-transactions'];
 
             // START MAINNET
             } else {
-                args = (type === 'gexp') ? ['--fast', '--cache','512'] : ['--unsafe-transactions', '--master', pw];
+                args = (type === 'gwhale') ? ['--fast', '--cache','512'] : ['--unsafe-transactions', '--master', pw];
                 pw = null;
             }
 
@@ -196,9 +196,9 @@ module.exports = {
                     if(popupCallback) {
                         popupCallback('noBinary');
 
-                        // set default to gexp, to prevent beeing unable to start the wallet
-                        if(type === 'exp')
-                            _this._writeNodeToFile('gexp', testnet);
+                        // set default to gwhale, to prevent beeing unable to start the wallet
+                        if(type === 'eth')
+                            _this._writeNodeToFile('gwhale', testnet);
                     }
                 }
             });
@@ -206,26 +206,26 @@ module.exports = {
             // node quit, e.g. master pw wrong
             global.nodes[type].once('exit',function(){
 
-                // If is exp then the password was typed wrong
-                if(!cbCalled && type === 'exp') {
+                // If is eth then the password was typed wrong
+                if(!cbCalled && type === 'eth') {
 
                     if(popupCallback)
                         popupCallback('passwordWrong');
 
-                    // set default to gexp, to prevent beeing unable to start the wallet
-                    _this._writeNodeToFile('gexp', testnet);
+                    // set default to gwhale, to prevent beeing unable to start the wallet
+                    _this._writeNodeToFile('gwhale', testnet);
 
                     log.warn('Password wrong '+ type +' node!');
                 }
             });
 
-            // we need to read the buff to prevent gexp/exp from stop working
+            // we need to read the buff to prevent gwhale/eth from stop working
             global.nodes[type].stdout.on('data', function(data) {
 
                 if(!cbCalled && _.isFunction(callback)){
 
-                    // (exp) prevent starting, when "Expanse (++)" didn't appear yet (necessary for the master pw unlock)
-                    if(type === 'exp' && data.toString().indexOf('Expanse (++)') === -1)
+                    // (eth) prevent starting, when "WhaleCoin (++)" didn't appear yet (necessary for the master pw unlock)
+                    if(type === 'eth' && data.toString().indexOf('WhaleCoin (++)') === -1)
                         return;
                     else if(popupCallback)
                         popupCallback(null);
@@ -238,14 +238,14 @@ module.exports = {
             global.nodes[type].stderr.on('data', function(data) {
 
                 // dont react on stderr when exp++
-                if(type === 'exp')
+                if(type === 'eth')
                     return;
 
                 // console.log('stderr ', data.toString());
                 if(!cbCalled && _.isFunction(callback)) {
 
-                    // (gexp) prevent starying until IPC service is started
-                    if(type === 'gexp' && data.toString().indexOf('IPC service started') === -1)
+                    // (gwhale) prevent starying until IPC service is started
+                    if(type === 'gwhale' && data.toString().indexOf('IPC service started') === -1)
                         return;
 
                     callCb(null);

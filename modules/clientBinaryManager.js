@@ -12,10 +12,10 @@ const EventEmitter = require('events').EventEmitter;
 const log = require('./utils/logger').create('ClientBinaryManager');
 
 
-// should be       'https://raw.githubusercontent.com/expanse-org/mist/master/clientBinaries.json'
-const BINARY_URL = 'https://raw.githubusercontent.com/expanse-org/mist/master/clientBinaries.json';
+// should be       'https://raw.githubusercontent.com/WhaleCoinOrg/mist/master/clientBinaries.json'
+const BINARY_URL = 'https://raw.githubusercontent.com/WhaleCoinOrg/mist/master/clientBinaries.json';
 
-const ALLOWED_DOWNLOAD_URLS_REGEX = /^http:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?expanse\.tech\/)(?:.+)/; // eslint-disable-line max-len
+const ALLOWED_DOWNLOAD_URLS_REGEX = /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?github\.com\/)(?:.+)/;; // eslint-disable-line max-len
 
 class Manager extends EventEmitter {
     constructor() {
@@ -48,7 +48,7 @@ class Manager extends EventEmitter {
     }
 
     _checkForNewConfig(restart) {
-        const nodeType = 'Gexp';
+        const nodeType = 'Gwhale';
         let binariesDownloaded = false;
         let nodeInfo;
 
@@ -191,8 +191,8 @@ class Manager extends EventEmitter {
 
             return mgr.init({
                 folders: [
-                    path.join(Settings.userDataPath, 'binaries', 'Gexp', 'unpacked'),
-                    path.join(Settings.userDataPath, 'binaries', 'Exp', 'unpacked'),
+                    path.join(Settings.userDataPath, 'binaries', 'Gwhale', 'unpacked'),
+                    path.join(Settings.userDataPath, 'binaries', 'Eth', 'unpacked'),
                 ],
             })
             .then(() => {
@@ -279,7 +279,7 @@ class Manager extends EventEmitter {
 
 
     _resolveEthBinPath() {
-        log.info('Resolving path to Exp client binary ...');
+        log.info('Resolving path to Eth client binary ...');
 
         let platform = process.platform;
 
@@ -296,7 +296,7 @@ class Manager extends EventEmitter {
             __dirname,
             '..',
             'nodes',
-            'exp',
+            'eth',
             `${platform}-${process.arch}`
         );
 
@@ -305,13 +305,13 @@ class Manager extends EventEmitter {
             binPath = binPath.replace('nodes', path.join('..', '..', 'nodes'));
         }
 
-        binPath = path.join(path.resolve(binPath), 'exp');
+        binPath = path.join(path.resolve(binPath), 'eth');
 
         if (platform === 'win') {
             binPath += '.exe';
         }
 
-        log.info(`Exp client binary path: ${binPath}`);
+        log.info(`Eth client binary path: ${binPath}`);
 
         this._availableClients.eth = {
             binPath,

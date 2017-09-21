@@ -35,7 +35,7 @@ class NodeSync extends EventEmitter {
 
         this._syncPromise = Q.try(() => {
             if (!ethereumNode.isIpcConnected) {
-                throw new Error('Cannot sync - Expanse node not yet connected');
+                throw new Error('Cannot sync - WhaleCoin node not yet connected');
             }
 
             return new Q((resolve, reject) => {
@@ -180,13 +180,13 @@ class NodeSync extends EventEmitter {
         switch (state) {  // eslint-disable-line default-case
             // stop syncing when node about to be stopped
         case ethereumNode.STATES.STOPPING:
-            log.info('Expanse node stopping, so stop sync');
+            log.info('WhaleCoin node stopping, so stop sync');
 
             this.stop();
             break;
             // auto-sync whenever node gets connected
         case ethereumNode.STATES.CONNECTED:
-            log.info('Expanse node connected, re-start sync');
+            log.info('WhaleCoin node connected, re-start sync');
 
                 // stop syncing, then start again
             this.stop().then(() => {

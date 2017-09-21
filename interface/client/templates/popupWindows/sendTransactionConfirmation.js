@@ -211,20 +211,20 @@ Template['popupWindows_sendTransactionConfirmation'].helpers({
     @method (totalAmount)
     */
     'totalAmount': function () {
-        var amount = EthTools.formatBalance(this.value, '0,0.00[0000000000000000]', 'expanse');
+        var amount = EthTools.formatBalance(this.value, '0,0.00[0000000000000000]', 'whalecoin');
         var dotPos = (~amount.indexOf('.')) ? amount.indexOf('.') + 3 : amount.indexOf(',') + 3;
 
         return amount ? amount.substr(0, dotPos) + '<small style="font-size: 0.5em;">' + amount.substr(dotPos) + '</small>' : '0';
     },
     /**
-    Calculates the fee used for this transaction in exp
+    Calculates the fee used for this transaction in whl
 
     @method (estimatedFee)
     */
     'estimatedFee': function () {
         var gas = TemplateVar.get('estimatedGas');
         if (gas && this.gasPrice) {
-            return EthTools.formatBalance(new BigNumber(gas, 10).times(new BigNumber(this.gasPrice, 10)), '0,0.0[0000000] unit', 'expanse');
+            return EthTools.formatBalance(new BigNumber(gas, 10).times(new BigNumber(this.gasPrice, 10)), '0,0.0[0000000] unit', 'whalecoin');
         }
     },
     /**
@@ -235,7 +235,7 @@ Template['popupWindows_sendTransactionConfirmation'].helpers({
     'providedGas': function () {
         var gas = TemplateVar.get('providedGas');
         if (gas && this.gasPrice) {
-            return EthTools.formatBalance(new BigNumber(gas, 10).times(new BigNumber(this.gasPrice, 10)), '0,0.0[0000000]', 'expanse');
+            return EthTools.formatBalance(new BigNumber(gas, 10).times(new BigNumber(this.gasPrice, 10)), '0,0.0[0000000]', 'whalecoin');
         }
     },
     /**

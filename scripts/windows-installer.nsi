@@ -26,10 +26,10 @@ CRCCheck on
 RequestExecutionLevel admin
 
 !define APPNAME "Mist"
-!define GROUPNAME "Expanse"
-!define HELPURL "https://github.com/expanse-org/mist/releases/issues"
-!define UPDATEURL "https://github.com/expanse-org/mist/releases"
-!define ABOUTURL "https://expanse.tech"
+!define GROUPNAME "WhaleCoin"
+!define HELPURL "https://github.com/WhaleCoinOrg/mist/releases/issues"
+!define UPDATEURL "https://github.com/WhaleCoinOrg/mist/releases"
+!define ABOUTURL "https://WhaleCoin.org"
 !define /date NOW "%Y%m%d"
 
 ## These must be integers and can be set on the command line by NSIS with "/DMAJORVERSION=0 /DMINORVERSION=8 /DBUILDVERSION=7"
@@ -65,7 +65,7 @@ ${EndIf}
 
     SetShellVarContext current
     StrCpy $DATADIR "$APPDATA\${APPNAME}"
-    StrCpy $NODEDATADIR "$APPDATA\Expanse"
+    StrCpy $NODEDATADIR "$APPDATA\WhaleCoin"
     StrCpy $SHORTCUTDIR "$SMPROGRAMS\${APPNAME}"
     StrCpy $DESKTOPDIR "$DESKTOP"
 

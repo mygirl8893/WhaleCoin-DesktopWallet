@@ -1,37 +1,26 @@
-
 {
     "clients": {
-        "Gexp": {
-            "version": "1.7.0-unstable",
+        "Gwhale": {
+            "version": "1.6.7",
             "platforms": {
                 "linux": {
                     "x64": {
                         "download": {
-                            "url": "http://build.expanse.tech/release/gexp-linux-amd64.tar.gz",
+                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "be34a8019fe7673efb1b7354738e9be8",
-                            "bin": "gexp-linux-amd64/gexp"
+                            "md5": "10de709ded7458c65b3838b53694edf5",
+                            "bin": "gwhale-linux-amd64/gwhale"
                         },
-                        "bin": "gexp",
+                        "bin": "gwhale",
                         "commands": {
                             "sanity": {
-                                "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
-                            }
-                        }
-                    },
-                    "ia32": {
-                        "download": {
-                            "url": "http://build.expanse.tech/release/gexp-linux-386.tar.gz",
-                            "type": "tar",
-                            "md5": "37037863d401fb2aa71a8068f8d5158e",
-                            "bin": "gexp-linux-386/gexp"
-                        },
-                        "bin": "gexp",
-                        "commands": {
-                            "sanity": {
-                                "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "args": [
+                                    "version"
+                                ],
+                                "output": [
+                                    "Gwhale",
+                                    "1.6.7"
+                                ]
                             }
                         }
                     }
@@ -39,16 +28,21 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "http://build.expanse.tech/release/gexp-darwin-amd64.tar.gz",
+                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-darwin-10.6-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "9107551e8c107a29e7f28c7a449cfb46",
-                            "bin": "gexp-darwin-amd64/gexp"
+                            "md5": "830355ea7d92f5bc5ce44c3c95301b3e",
+                            "bin": "gwhale-darwin-10.6-amd64/gwhale"
                         },
-                        "bin": "gexp",
+                        "bin": "gwhale",
                         "commands": {
                             "sanity": {
-                                "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "args": [
+                                    "version"
+                                ],
+                                "output": [
+                                    "Gwhale",
+                                    "1.6.7"
+                                ]
                             }
                         }
                     }
@@ -56,31 +50,41 @@
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "http://build.expanse.tech/release/gexp-windows-amd64.zip",
+                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "d1ee991dadbf60a6c238aa0ef7133171",
-                            "bin": "gexp-windows-amd64\\gexp.exe"
+                            "md5": "951d3d014dc1ddb853a78a6578393f89",
+                            "bin": "gwhale-windows-amd64\\gwhale.exe"
                         },
-                        "bin": "gexp.exe",
+                        "bin": "gwhale.exe",
                         "commands": {
                             "sanity": {
-                                "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "args": [
+                                    "version"
+                                ],
+                                "output": [
+                                    "Gwhale",
+                                    "1.6.7"
+                                ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "http://build.expanse.tech/release/gexp-windows-386.zip",
+                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-windows-386.zip",
                             "type": "zip",
-                            "md5": "5f926ea78fd52802778c782e428610b8",
-                            "bin": "gexp-windows-386\\gexp.exe"
+                            "md5": "44fa052576d2839bcd1324bc006507ff",
+                            "bin": "gwhale-windows-386\\gwhale.exe"
                         },
-                        "bin": "gexp.exe",
+                        "bin": "gwhale.exe",
                         "commands": {
                             "sanity": {
-                                "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "args": [
+                                    "version"
+                                ],
+                                "output": [
+                                    "Gwhale",
+                                    "1.6.7"
+                                ]
                             }
                         }
                     }

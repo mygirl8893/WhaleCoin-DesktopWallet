@@ -154,7 +154,7 @@ app.on('ready', () => {
     // if using HTTP RPC then inform user
     if (Settings.rpcMode === 'http') {
         dialog.showErrorBox('Insecure RPC connection', `
-WARNING: You are connecting to an Expanse node via: ${Settings.rpcHttpPath}
+WARNING: You are connecting to an WhaleCoin node via: ${Settings.rpcHttpPath}
 
 This is less secure than using local IPC - your passwords will be sent over the wire in plaintext.
 
@@ -334,7 +334,7 @@ onReady = () => {
                     message: global.i18n.t('mist.errors.legacyChain.title'),
                     detail: global.i18n.t('mist.errors.legacyChain.description')
                 }, () => {
-                    shell.openExternal('https://github.com/expanse-org/mist/releases/');
+                    shell.openExternal('https://github.com/WhaleCoinOrg/mist/releases/');
                     app.quit();
                 });
 

@@ -20,8 +20,8 @@ mistInit = function () {
 
             Tabs.insert({
                 _id: 'browser',
-                url: 'https://expanse.tech',
-                redirect: 'https://expanse.tech',
+                url: 'https://WhaleCoin.org',
+                redirect: 'https://WhaleCoin.org',
                 position: 0
             });
         }
@@ -31,8 +31,8 @@ mistInit = function () {
             { _id: 'wallet' },
             {
                 $set: {
-                    url: 'https://wallet.expanse.tech',
-                    redirect: 'https://wallet.expanse.tech',
+                    url: 'https://wallet.WhaleCoin.org',
+                    redirect: 'https://wallet.WhaleCoin.org',
                     position: 1,
                     permissions: {
                         admin: true

@@ -2,7 +2,7 @@
 ``````
 Version: `0.0.0`
 OS & Version: windows/linux/osx
-Node type: `exp/gexp(default)`
+Node type: `eth/gwhale(default)`
 ``````
 
 #### Please check the **already existing** issues to keep duplicates at a minimum.

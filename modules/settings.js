@@ -33,7 +33,7 @@ const argv = require('yargs')
         node: {
             demand: false,
             default: null,
-            describe: 'Node to use: gexp, exp',
+            describe: 'Node to use: gwhale, eth',
             requiresArg: true,
             nargs: 1,
             type: 'string',
@@ -58,7 +58,7 @@ const argv = require('yargs')
         },
         gethpath: {
             demand: false,
-            describe: 'Path to Gexp executable to use instead of default.',
+            describe: 'Path to Gwhale executable to use instead of default.',
             requiresArg: true,
             nargs: 1,
             type: 'string',
@@ -66,7 +66,7 @@ const argv = require('yargs')
         },
         ethpath: {
             demand: false,
-            describe: 'Path to Exp executable to use instead of default.',
+            describe: 'Path to Eth executable to use instead of default.',
             requiresArg: true,
             nargs: 1,
             type: 'string',
@@ -115,7 +115,7 @@ const argv = require('yargs')
             type: 'boolean',
         },
         '': {
-            describe: 'To pass options to the underlying node (e.g. Gexp) use the --node- prefix, e.g. --node-datadir',
+            describe: 'To pass options to the underlying node (e.g. Gwhale) use the --node- prefix, e.g. --node-datadir',
             group: 'Node options:',
         },
     })
@@ -179,7 +179,7 @@ class Settings {
     }
 
     get appName() {
-        return this.uiMode === 'mist' ? 'Mist' : 'Expanse Wallet';
+        return this.uiMode === 'mist' ? 'Mist' : 'WhaleCoin Wallet';
     }
 
     get appLicense() {
@@ -243,13 +243,13 @@ class Settings {
         ipcPath = this.userHomePath;
 
         if (process.platform === 'darwin') {
-            ipcPath += '/Library/Expanse/gexp.ipc';
+            ipcPath += '/Library/WhaleCoin/gwhale.ipc';
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-            ipcPath += '/.expanse/gexp.ipc';
+            ipcPath += '/.whalecoin/gwhale.ipc';
         } else if (process.platform === 'win32') {
-            ipcPath = '\\\\.\\pipe\\gexp.ipc';
+            ipcPath = '\\\\.\\pipe\\gwhale.ipc';
         }
 
         this._log.debug(`IPC path: ${ipcPath}`);

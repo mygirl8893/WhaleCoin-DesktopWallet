@@ -1,11 +1,11 @@
 {
-  "name": "Mist-Expanse",
+  "name": "Mist-WhaleCoin",
   "version": "0.8.9",
   "license": "GPL-3.0",
-  "author": "Expanse Mist Team <christopher@ethereum.org>, Ethereum Mist Team <mist@ethereum.org>",
+  "author": "WhaleCoin Mist Team <htrapdev@gmail.org>, Ethereum Mist Team <mist@ethereum.org>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/expanse-org/mist.git"
+    "url": "https://github.com/WhaleCoin/mist.git"
   },
   "scripts": {
     "postinstall": "cd interface && yarn"

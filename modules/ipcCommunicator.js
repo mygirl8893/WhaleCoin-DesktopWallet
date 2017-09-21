@@ -144,13 +144,13 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
                     }
                 // geth
                 } else {
-                    if (process.platform === 'darwin') keystorePath += '/Library/Expanse/keystore';
+                    if (process.platform === 'darwin') keystorePath += '/Library/WhaleCoin/keystore';
 
                     if (process.platform === 'freebsd' ||
                         process.platform === 'linux' ||
-                        process.platform === 'sunos') keystorePath += '/.expanse/keystore';
+                        process.platform === 'sunos') keystorePath += '/.whalecoin/keystore';
 
-                    if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\Expanse\\keystore`;
+                    if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\WhaleCoin\\keystore`;
                 }
 
                 fs.writeFile(`${keystorePath}/0x${keyfile.address}`, data, (err) => {
@@ -176,12 +176,12 @@ ipc.on('backendAction_importWalletFile', (e, path, pw) => {
     const spawn = require('child_process').spawn;  // eslint-disable-line global-require
     const ClientBinaryManager = require('./clientBinaryManager');  // eslint-disable-line global-require
     let error = false;
-    const binPath = ClientBinaryManager.getClient('gexp').binPath;
+    const binPath = ClientBinaryManager.getClient('gwhale').binPath;
     const nodeProcess = spawn(binPath, ['wallet', 'import', path]);
 
     nodeProcess.once('error', () => {
         error = true;
-        e.sender.send('uiAction_importedWalletFile', 'Couldn\'t start the "gexp wallet import <file.json>" process.');
+        e.sender.send('uiAction_importedWalletFile', 'Couldn\'t start the "gwhale wallet import <file.json>" process.');
     });
     nodeProcess.stdout.on('data', (_data) => {
         const data = _data.toString();

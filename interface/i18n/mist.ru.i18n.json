@@ -5,7 +5,7 @@
                 "label": "__app__",
                 "about": "О __app__",
                 "checkForUpdates": "Проверить обновления...",
-                "checkForNodeUpdates": "Check for Expanse node updates...",
+                "checkForNodeUpdates": "Check for WhaleCoin node updates...",
                 "services": "Сервисы",
                 "hide": "Скрыть __app__",
                 "hideOthers": "Скрыть прочие",
@@ -42,7 +42,7 @@
                 "devToolsWebview": "__webview__",
                 "runTests": "Запустить тесты",
                 "logFiles": "Показать журнал",
-                "ethereumNode": "Expanse-нода",
+                "ethereumNode": "WhaleCoin-нода",
                 "network": "Сеть",
                 "mainNetwork": "Основная сеть",
                 "startMining": "⛏ Запустить майнинг (только для тестовой сети)",
@@ -69,7 +69,7 @@
             "nodeStartup": "Похоже, что нода не может быть запущена, может у вас уже есть запущенная нода? Или, возможно, сейчас запущено обновление базы данных?",
             "timeSync": {
                 "title": "Часы на вашем компьютере не синхронизированы.",
-                "description": "Для успешной синхронизации с сетью Expanse вам необходимо синхронизировать часы вашего компьютера с текущим временем на сервере.",
+                "description": "Для успешной синхронизации с сетью WhaleCoin вам необходимо синхронизировать часы вашего компьютера с текущим временем на сервере.",
                 "win32": "Откройте системные настройки \"Дата и время\" и установите флажок для настройки времени по Интернету. Смотрите подробности в этом описании: http://www.guidingtech.com/3119/windows-clock-sync/",
                 "linux": "Чтобы использовать сервер синхронизации времени установите \"ntp\" через команду \"apt-get install ntp\".",
                 "darwin": "Для включения синхронизации времени откройте системные настройки и укажите: \"Устанавливать время и дату автоматически\"."
@@ -80,7 +80,7 @@
             },
             "legacyChain": {
                 "title": "Legacy chain detected",
-                "description": "Your node is currently on the unsupported Expanse Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/expanse-org/mist/releases/0.8.2"
+                "description": "Your node is currently on the unsupported WhaleCoin Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/WhaleCoin-org/mist/releases/0.8.2"
             }
         },
         "rightClick": {
@@ -97,9 +97,9 @@
             "mainNetwork": "Основная сеть",
             "testNetwork": "Тестовая сеть",
             "privateNetwork": "Приватная сеть",
-            "mainnetExplain": "Вы подключены к основной Expanse-сети",
-            "testnetExplain": "Вы подключены к тестовой Expanse-сети, НЕ ОТПРАВЛЯЙТЕ настоящий эфир на эти адреса",
-            "privatenetExplain": "Вы подключены к приватной Expanse-сети, НЕ ОТПРАВЛЯЙТЕ настоящий эфир на эти адреса",
+            "mainnetExplain": "Вы подключены к основной WhaleCoin-сети",
+            "testnetExplain": "Вы подключены к тестовой WhaleCoin-сети, НЕ ОТПРАВЛЯЙТЕ настоящий эфир на эти адреса",
+            "privatenetExplain": "Вы подключены к приватной WhaleCoin-сети, НЕ ОТПРАВЛЯЙТЕ настоящий эфир на эти адреса",
             "unknownnetExplain": "Не удается определить текущую подключенную сеть",
             "peers": "peers"
         },
@@ -115,20 +115,20 @@
             }
         },
         "startScreen": {
-            "runningNodeFound": "Обнаружена запущеная Expanse-нода!",
-            "startingNode": "Запуск Expanse-ноды...",
-            "stoppingNode": "Остановка Expanse-ноды...",
+            "runningNodeFound": "Обнаружена запущеная WhaleCoin-нода!",
+            "startingNode": "Запуск WhaleCoin-ноды...",
+            "stoppingNode": "Остановка WhaleCoin-ноды...",
             "startedNode": "Запуск приложения...",
-            "nodeConnectionTimeout": "Не удалось запустить Expanse-ноду!<br><small>Если вы <a href='https://www.ethereum.org/cli#gexp' class='button' target='_blank'>установили Gexp</a>, используйте следующую команду для запуска: <br> <code>gexp --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Либо сообщите от проблеме </a></small>",
-            "nodeBinaryNotFound": "Не найдены программные файлы для Expanse-ноды!<br><small> <a href='https://www.ethereum.org/cli#gexp' class='button' target='_blank'> Пожалуйста, для начала изучите руководство. </a> </small>",
-            "nodeStarting": "Expanse-нода запускается...",
-            "nodeStarted": "Expanse-нода запущена",
-            "nodeConnected": "Expanse-нода подключена",
-            "nodeStopping": "Expanse-нода останавливается...",
-            "nodeStopped": "Expanse-нода остановлена",
-            "nodeError": "Ошибка подключения к Expanse-ноде :'(",
-            "unableToBindPort": "Expanse-нода не запущена. Может запущен другой экземпляр?",
-            "nodeSyncing": "Expanse-ноде необходимо синхронизироваться, пожалуйста подождите...",
+            "nodeConnectionTimeout": "Не удалось запустить WhaleCoin-ноду!<br><small>Если вы <a href='https://www.ethereum.org/cli#gexp' class='button' target='_blank'>установили Gexp</a>, используйте следующую команду для запуска: <br> <code>gexp --ipcpath __path__</code></small><br> <small><a href='https://github.com/WhaleCoin-org/mist/issues' class='button' target='_blank'> Либо сообщите от проблеме </a></small>",
+            "nodeBinaryNotFound": "Не найдены программные файлы для WhaleCoin-ноды!<br><small> <a href='https://www.ethereum.org/cli#gexp' class='button' target='_blank'> Пожалуйста, для начала изучите руководство. </a> </small>",
+            "nodeStarting": "WhaleCoin-нода запускается...",
+            "nodeStarted": "WhaleCoin-нода запущена",
+            "nodeConnected": "WhaleCoin-нода подключена",
+            "nodeStopping": "WhaleCoin-нода останавливается...",
+            "nodeStopped": "WhaleCoin-нода остановлена",
+            "nodeError": "Ошибка подключения к WhaleCoin-ноде :'(",
+            "unableToBindPort": "WhaleCoin-нода не запущена. Может запущен другой экземпляр?",
+            "nodeSyncing": "WhaleCoin-ноде необходимо синхронизироваться, пожалуйста подождите...",
             "nodeSyncInfo": "Загружено блоков __displayBlock__ из __highestBlock__",
             "nodeSyncInfoStates": "Загружено блоков __displayBlock__ из __highestBlock__, <br> Загружено частей структуры блокчейна __displayState__ из __displayKnownStates__",
             "nodeSyncConnecting": "Поиск пиров...",
@@ -140,7 +140,7 @@
                 "downloading": "Downloading new node...",
                 "loadConfig": "Loading client config...",
                 "filtering": "Filtering client binaries...",
-                "done": "Expanse node up-to-date...",
+                "done": "WhaleCoin node up-to-date...",
                 "error": "Error running downloaded binary."
             }
         },
@@ -203,13 +203,13 @@
                 "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
             },
             "onboarding": {
-                "description": "Expanseium представляет собой децентрализованную платформу основанную на блокчейне для создания надежных и децентрализованных приложений",
+                "description": "WhaleCoinium представляет собой децентрализованную платформу основанную на блокчейне для создания надежных и децентрализованных приложений",
                 "goToTestnet": "Использовать тестовую сеть",
                 "goToTestnetDescription": "Свободное тестирование технологии в тестовой сети (sandbox), без использования реального эфира.",
                 "gotoMainnet": "Использовать основную сеть",
                 "gotoMainnetDescription": "Вам потребуется некоторое количество эфира для того, чтобы создавать и выполнять контракты. Не волнуйтесь, мы вам поможем получить некоторое количество...",
                 "doYouHaveAWalletFile": "У вас есть файл кошелька?",
-                "walletFileDescription": "<p>Если вы участвовали в Expanse Pre-sale 2014, у вас должен быть файл с именем <code>ethereum_wallet_backup.json</code>. Он был загружен после продажи, а также отправлен на электронную почту</p>",
+                "walletFileDescription": "<p>Если вы участвовали в WhaleCoin Pre-sale 2014, у вас должен быть файл с именем <code>ethereum_wallet_backup.json</code>. Он был загружен после продажи, а также отправлен на электронную почту</p>",
                 "dropFilesHere": "Перетащите сюда ваш файл",
                 "creating": "Создание...",
                 "importing": "Импорт...",
@@ -218,8 +218,8 @@
                 "protectTitle": "Защитите ваш аккаунт",
                 "protectDescription": "Выберите пароль для новой учетной записи. Придумайте такой пароль, как будто он защитит ваши ключи от дома!",
                 "accountTitle": "Загрузите его!",
-                "etherDescription": "Сеть Expanse основана на маркерах называемых “Expanse” (Эфир). Он вам необходим в небольшом количетсве для того, что бы что-либо сделать в сети Expanseium.",
-                "loadItDescription": "Если у вас уже есть Bitcoin, или любая другая криптовалюта, вы можете легко преобразовать её в эфир (Expanse) с помощью Shapeshift. <br><br> Мы рекомендуем загрузить где-то <strong>от 0.25 до 1 эфира</strong>.",
+                "etherDescription": "Сеть WhaleCoin основана на маркерах называемых “WhaleCoin” (Эфир). Он вам необходим в небольшом количетсве для того, что бы что-либо сделать в сети WhaleCoinium.",
+                "loadItDescription": "Если у вас уже есть Bitcoin, или любая другая криптовалюта, вы можете легко преобразовать её в эфир (WhaleCoin) с помощью Shapeshift. <br><br> Мы рекомендуем загрузить где-то <strong>от 0.25 до 1 эфира</strong>.",
                 "mineItDescription": "<strong>В тестовой сети вы можете добыть (намайнить) эфир сами, перейдя в меню <em>Дополнительно</em> и выбрав <em>Запустить майнинг</em>. </strong> <br> <strong> НЕ ПЫТАЙТЕСЬ ОТПРАВИТЬ РЕАЛЬНЫЙ ЭФИР НА ЭТОТ АДРЕС</strong>",
                 "you": "ВЫ",
                 "etherbase": "Основной аккаунт (etherbase)",

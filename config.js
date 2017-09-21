@@ -1,11 +1,11 @@
 
 var config = {
-    name: 'Mist-Expanse',
+    name: 'Mist-WhaleCoin',
 };
 
 // change for wallet
 if(global.mode === 'wallet') {
-    config.name = 'Expanse Wallet';
+    config.name = 'WhaleCoin Wallet';
 }
 
 module.exports = config;

@@ -146,7 +146,7 @@ class IpcProviderBackend {
                                     if (ethereumNode.STATES.CONNECTED === newState) {
                                         ethereumNode.removeListener('state', onStateChange);
 
-                                        log.debug(`Expanse node connected, resume connecting socket ${ownerId}`);
+                                        log.debug(`WhaleCoin node connected, resume connecting socket ${ownerId}`);
 
                                         resolve();
                                     }
@@ -201,7 +201,7 @@ class IpcProviderBackend {
 
 
     /**
-     * Handler for when Expanse node state changes.
+     * Handler for when WhaleCoin node state changes.
      *
      * Auto-reconnect sockets when ethereum node state changes
      *
@@ -211,7 +211,7 @@ class IpcProviderBackend {
         switch (state) {  // eslint-disable-line default-case
             // stop syncing when node about to be stopped
         case ethereumNode.STATES.STOPPING:
-            log.info('Expanse node stopping, disconnecting sockets');
+            log.info('WhaleCoin node stopping, disconnecting sockets');
 
             Q.all(_.map(this._connections, (item) => {
                 if (item.socket.isConnected) {

@@ -28,7 +28,7 @@
 
                     <div class="connection">
                         <div class="amount">
-                            {{{totalAmount}}} <span class="unit">EXP</span>
+                            {{{totalAmount}}} <span class="unit">WHL</span>
                         </div>
                         {{#if TemplateVar.get "executionFunction" }}
                             <div class='function-signature {{#if TemplateVar.get "hasSignature"}} has-signature {{/if}} '>
@@ -115,7 +115,7 @@
 
                             </div>
                             <div class="type">
-                                {{providedGas}} exp (<span class="provided-gas" contenteditable="true">{{dapp_formatNumber (TemplateVar.get 'initialProvidedGas') '0'}}</span> gas)
+                                {{providedGas}} whl (<span class="provided-gas" contenteditable="true">{{dapp_formatNumber (TemplateVar.get 'initialProvidedGas') '0'}}</span> gas)
                             </div>
                         </li>
                         <li>

@@ -11,7 +11,7 @@ const EventEmitter = require('events').EventEmitter;
 const Sockets = require('./socketManager');
 const ClientBinaryManager = require('./clientBinaryManager');
 
-const DEFAULT_NODE_TYPE = 'gexp';
+const DEFAULT_NODE_TYPE = 'gwhale';
 const DEFAULT_NETWORK = 'main';
 
 
@@ -62,11 +62,11 @@ class EthereumNode extends EventEmitter {
     }
 
     get isEth() {
-        return this._type === 'exp';
+        return this._type === 'eth';
     }
 
     get isGeth() {
-        return this._type === 'gexp';
+        return this._type === 'gwhale';
     }
 
     get isMainNetwork() {
@@ -238,7 +238,7 @@ class EthereumNode extends EventEmitter {
 
     /**
      * Start an ethereum node.
-     * @param  {String} nodeType gexp, exp, etc
+     * @param  {String} nodeType gwhale, eth, etc
      * @param  {String} network  network id
      * @return {Promise}
      */
@@ -296,8 +296,8 @@ class EthereumNode extends EventEmitter {
                 this.state = STATES.ERROR;
 
                 // if unable to start eth node then write geth to defaults
-                if (nodeType === 'exp') {
-                    Settings.saveUserData('node', 'gexp');
+                if (nodeType === 'eth') {
+                    Settings.saveUserData('node', 'gwhale');
                 }
 
                 throw err;
@@ -351,13 +351,13 @@ class EthereumNode extends EventEmitter {
 
                 // START TESTNET
                 if (network == 'test') {
-                    args = (nodeType === 'gexp')
+                    args = (nodeType === 'gwhale')
                         ? ['--testnet', '--fast', '--ipcpath', Settings.rpcIpcPath]
                         : ['--morden', '--unsafe-transactions'];
                 }
                 // START MAINNET
                 else {
-                    args = (nodeType === 'gexp')
+                    args = (nodeType === 'gwhale')
                         ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512')]
                         : ['--unsafe-transactions'];
                 }
@@ -403,9 +403,9 @@ class EthereumNode extends EventEmitter {
                     if (STATES.STARTING === this.state) {
                         const dataStr = data.toString().toLowerCase();
 
-                        if (nodeType === 'gexp') {
+                        if (nodeType === 'gwhale') {
                             if (dataStr.indexOf('fatal: error') >= 0) {
-                                const err = new Error(`Gexp error: ${dataStr}`);
+                                const err = new Error(`Gwhale error: ${dataStr}`);
 
                                 if (dataStr.indexOf('bind') >= 0) {
                                     err.tag = UNABLE_TO_BIND_PORT_ERROR;
