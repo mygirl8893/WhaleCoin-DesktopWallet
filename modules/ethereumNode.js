@@ -375,9 +375,7 @@ class WhaleCoinNode extends EventEmitter {
                     args = (nodeType === 'gwhale')
                         ? ['--cache', ((process.arch === 'x64') ? '1024' : '512'),
                         '--rpc',
-                        '--rpcport', '8545',
-                        '--rpcaddr', '0.0.0.0',
-                        '--rpccorsdomain', '*']
+                        '--rpccorsdomain', 'http://localhost:3000']
                         : ['--unsafe-transactions'];
                 }
 
