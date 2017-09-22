@@ -1,4 +1,6 @@
-# Mist Browser
+# WhaleCoin Desktop Wallet
+
+See [Releases](https://github.com/WhaleCoinOrg/DesktopWallet/releases) for the latest release.
 
 [![Join the chat at https://gitter.im/WhaleCoinOrg/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WhaleCoinOrg/mist?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status develop branch](https://travis-ci.org/WhaleCoinOrg/mist.svg?branch=develop)](https://travis-ci.org/WhaleCoinOrg/mist)
