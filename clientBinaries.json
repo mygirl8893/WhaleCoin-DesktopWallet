@@ -1,14 +1,14 @@
 {
     "clients": {
         "Gwhale": {
-            "version": "1.6.7",
+            "version": "1.6.8",
             "platforms": {
                 "linux": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-linux-amd64.tar.gz",
+                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.8/gwhale-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "10de709ded7458c65b3838b53694edf5",
+                            "md5": "94278dc1d873443481e764cb99de5a69",
                             "bin": "gwhale-linux-amd64/gwhale"
                         },
                         "bin": "gwhale",
@@ -19,7 +19,7 @@
                                 ],
                                 "output": [
                                     "Gwhale",
-                                    "1.6.7"
+                                    "1.6.8"
                                 ]
                             }
                         }
@@ -28,9 +28,9 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-darwin-10.6-amd64.tar.gz",
+                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.8/gwhale-darwin-10.6-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "830355ea7d92f5bc5ce44c3c95301b3e",
+                            "md5": "8721bc38d070ff595ea31bd2354a11ef",
                             "bin": "gwhale-darwin-10.6-amd64/gwhale"
                         },
                         "bin": "gwhale",
@@ -41,7 +41,7 @@
                                 ],
                                 "output": [
                                     "Gwhale",
-                                    "1.6.7"
+                                    "1.6.8"
                                 ]
                             }
                         }
@@ -50,9 +50,9 @@
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-windows-amd64.zip",
+                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.8/gwhale-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "951d3d014dc1ddb853a78a6578393f89",
+                            "md5": "db46e4c222998576944f9d928982b910",
                             "bin": "gwhale-windows-amd64\\gwhale.exe"
                         },
                         "bin": "gwhale.exe",
@@ -63,16 +63,16 @@
                                 ],
                                 "output": [
                                     "Gwhale",
-                                    "1.6.7"
+                                    "1.6.8"
                                 ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.7/gwhale-windows-386.zip",
+                            "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.8/gwhale-windows-386.zip",
                             "type": "zip",
-                            "md5": "44fa052576d2839bcd1324bc006507ff",
+                            "md5": "4b21e1776cc20b7f13be308131ed90b2",
                             "bin": "gwhale-windows-386\\gwhale.exe"
                         },
                         "bin": "gwhale.exe",
@@ -83,7 +83,7 @@
                                 ],
                                 "output": [
                                     "Gwhale",
-                                    "1.6.7"
+                                    "1.6.8"
                                 ]
                             }
                         }
