@@ -8,7 +8,7 @@
                         "download": {
                             "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.9/gwhale-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "be8adb376ca24906b91ed9d28fb7c8e2",
+                            "md5": "1f7079de3fe5aa19e1d6d3abdd41efce",
                             "bin": "gwhale-linux-amd64/gwhale"
                         },
                         "bin": "gwhale",
@@ -30,7 +30,7 @@
                         "download": {
                             "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.9/gwhale-darwin-10.6-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "5c129d52b92d12ad8cb61e3266508aa3",
+                            "md5": "da5cea32ef61dd9630961373fdf8a1e6",
                             "bin": "gwhale-darwin-10.6-amd64/gwhale"
                         },
                         "bin": "gwhale",
@@ -52,7 +52,7 @@
                         "download": {
                             "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.9/gwhale-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "f050333eea65b887f15eb8889529a4a1",
+                            "md5": "221757ac16c7119e630927d2710711aa",
                             "bin": "gwhale-windows-amd64\\gwhale.exe"
                         },
                         "bin": "gwhale.exe",
@@ -72,7 +72,7 @@
                         "download": {
                             "url": "https://github.com/WhaleCoinOrg/WhaleCoin/releases/download/v1.6.9/gwhale-windows-386.zip",
                             "type": "zip",
-                            "md5": "f87bfac51a550e711cff78a302a8ccb6",
+                            "md5": "14b9b53e234e6fdb78a207655aa84f3b",
                             "bin": "gwhale-windows-386\\gwhale.exe"
                         },
                         "bin": "gwhale.exe",
